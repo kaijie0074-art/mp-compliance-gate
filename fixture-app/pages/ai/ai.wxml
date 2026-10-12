@@ -1,0 +1,9 @@
+<!-- AI 问答页（违规现场 AIG01：生成结果界面无任何 AI 生成标识） -->
+<view class="ai-chat-page">
+  <scroll-view class="chat-scroll" scroll-y>
+    <view wx:for="{{messages}}" wx:key="index" class="chat-answer">{{item.content}}</view>
+  </scroll-view>
+  <view class="ai-result-hint">以上内容由大模型实时生成</view>
+  <input class="chat-input" placeholder="想吃什么？比如：台东的苍蝇馆子" bindinput="onInput" />
+  <button bindtap="onAsk">问 AI</button>
+</view>

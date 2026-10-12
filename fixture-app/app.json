@@ -1,0 +1,9 @@
+{
+  "pages": ["pages/ai/ai"],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "苍蝇馆子助手",
+    "navigationBarBackgroundColor": "#f7f7f7"
+  },
+  "sitemapLocation": "sitemap.json"
+}

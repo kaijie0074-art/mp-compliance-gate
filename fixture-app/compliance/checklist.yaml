@@ -1,0 +1,14 @@
+# 深度合成类目提审材料清单（违规现场 REG01：材料无人跟踪）
+materials:
+  - id: business_license
+    name: 营业执照（企业主体盖章件）
+    status: pending
+  - id: model_provider_filing
+    name: 模型技术方算法备案证明（截图/文件）
+    status: pending
+  - id: label_screenshot
+    name: AI 生成标识样式截图（界面+复制路径）
+    status: missing
+  - id: user_agreement_label_clause
+    name: 用户协议「AI 生成内容标识方法与样式」条款
+    status: pending

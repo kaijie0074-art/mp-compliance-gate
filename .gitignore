@@ -1,0 +1,5 @@
+node_modules/
+tmp-report.json
+tmp-report.md
+*.log
+.DS_Store

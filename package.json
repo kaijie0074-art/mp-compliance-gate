@@ -1,0 +1,14 @@
+{
+  "name": "mp-compliance-gate",
+  "version": "0.1.0",
+  "description": "微信小程序 AI 功能上架合规门禁：把提审 checklist 变成可机械执行的扫描器（T2 模拟项目）",
+  "type": "module",
+  "bin": { "mp-compliance-gate": "src/cli.mjs" },
+  "scripts": {
+    "gate": "node src/cli.mjs",
+    "gate": "node src/cli.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "engines": { "node": ">=18" },
+  "license": "MIT"
+}

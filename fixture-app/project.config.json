@@ -1,0 +1,12 @@
+{
+  "compileType": "miniprogram",
+  "libVersion": "2.30.0",
+  "appid": "wx0000000000000000",
+  "projectname": "fixture-violating-app",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true
+  }
+}
