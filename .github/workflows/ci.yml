@@ -15,6 +15,6 @@ jobs:
       - run: npm test
       - name: 门禁自举（违规 fixture 必须被拦，合规 fixture 必须放行）
         run: |
-          node src/cli.mjs fixture-app; code=$?
+          code=0; node src/cli.mjs fixture-app || code=$?
           if [ "$code" -ne 1 ]; then echo "违规 fixture 应以退出码 1 拦截，实际 $code"; exit 1; fi
           node src/cli.mjs fixture-app-compliant
