@@ -1,0 +1,20 @@
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  gate-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm test
+      - name: 门禁自举（违规 fixture 必须被拦，合规 fixture 必须放行）
+        run: |
+          node src/cli.mjs fixture-app; code=$?
+          if [ "$code" -ne 1 ]; then echo "违规 fixture 应以退出码 1 拦截，实际 $code"; exit 1; fi
+          node src/cli.mjs fixture-app-compliant
