@@ -70,5 +70,6 @@ export async function runGate(root) {
     );
   }
   const passedRuleIds = RULES.filter((r) => !findings.some((f) => f.ruleId === r.id)).map((r) => r.id);
-  return { root, findings, passedRuleIds, blockers: findings.filter((f) => f.severity === "blocker").length };
+  const ruleNames = Object.fromEntries(meta.rules.map((r) => [r.id, r.name]));
+  return { root, findings, passedRuleIds, ruleNames, blockers: findings.filter((f) => f.severity === "blocker").length };
 }

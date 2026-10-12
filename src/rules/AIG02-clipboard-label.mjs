@@ -16,11 +16,15 @@ export default {
           // 向后看 6 行取 data 字段
           const window = lines.slice(i, i + 7).join("\n");
           const dataMatch = window.match(/data\s*:\s*(.{0,120})/s);
-          const dataExpr = dataMatch ? dataMatch[1] : "";
-          if (!LABEL_VAR.test(window) && !LABEL_TEXT.test(window)) {
+          if (!dataMatch) {
             findings.push({
               file: rel(ctx, f),
-              detail: `第 ${i + 1} 行 wx.setClipboardData 的 data 未追加 AI 生成标识（文案或标识变量均未检出）`,
+              detail: `第 ${i + 1} 行 wx.setClipboardData 未在窗口内见到 data 表达式——需人工确认复制内容已追加 AI 生成标识`,
+            });
+          } else if (!LABEL_VAR.test(window) && !LABEL_TEXT.test(window)) {
+            findings.push({
+              file: rel(ctx, f),
+              detail: `第 ${i + 1} 行 wx.setClipboardData 的 data 未追加 AI 生成标识（文案或标识变量均未检出；若为外部拼接的变量引用需人工确认）`,
             });
           }
         }

@@ -14,6 +14,9 @@ export function load(text) {
   }
   function scalar(v) {
     v = v.trim();
+    if (v.startsWith("[") || v.startsWith("{")) {
+      throw new Error(`YAML 子集不支持流式集合: ${v.slice(0, 40)}`);
+    }
     if (v.startsWith('"') && v.endsWith('"')) return v.slice(1, -1);
     if (v.startsWith("'") && v.endsWith("'")) return v.slice(1, -1);
     if (/^-?\d+(\.\d+)?$/.test(v)) return Number(v);
