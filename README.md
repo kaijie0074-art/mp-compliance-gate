@@ -26,10 +26,22 @@ node src/cli.mjs path/to/miniprogram --json report.json --md report.md
 ## 快速开始
 
 ```bash
-npm test                                  # 8 项测试（含双 fixture 正反验证）
+npm test                                  # 27 项测试（双 fixture 正反验证 + 12 项对抗加固回归）
 node src/cli.mjs fixture-app              # 违规示例：9 findings / 8 blocker / exit 1
 node src/cli.mjs fixture-app-compliant    # 合规示例：全绿 / exit 0
 ```
+
+## 对抗加固（2026-10-14 深潜研究）
+
+用 glm-4-flash 做了两轮对抗评测（盲生成/知规对抗/合规意图/定向洗白共 48 个生成样本，逐样本人工核读），据此补齐 6 条真实绕过路径并各锁一条回归测试（`tests/adversarial-hardening.test.mjs`）：
+
+- project.config.json 平铺与 `miniprogram` 嵌套两形态统一解析；JSON 解析失败显式转人工（不再静默全盲）
+- yaml-lite 支持标准同缩进列表；checklist「缺失」与「解析失败」消息分流
+- AIG01 增加 app.json 页映射结构判定（词表之外的第二道召回）
+- AIG02 判定收紧到 data 表达式本身（堵诱饵假通过），标识文案词表扩充变体
+- REG01 就绪状态词表归一化（ready/checked/completed/已就绪…）
+
+实测（见 [docs/research/deep-dive-20261014.md](docs/research/deep-dive-20261014.md)）：盲对抗语料 AIG01 召回 0%→91%，知规对抗 urlCheck 嵌套绕过 2/2 封死，合规语料误报 7/8→0。已知固有上限：自证材料（checklist all-ready 伪造）与完全洗白页面（无任何 AI 静态信号）无法静态识破，规则消息中显式转人工。
 
 ## 设计源头
 

@@ -1,0 +1,5 @@
+<view class="container">
+  <input class="input-box" placeholder="请输入您的查询" bindinput="onInput"/>
+  <button class="submit-btn" bindtap="submitQuery">查询</button>
+  <view class="answer-box" wx:if="{{showAnswer}}">{{answer}}</view>
+</view>

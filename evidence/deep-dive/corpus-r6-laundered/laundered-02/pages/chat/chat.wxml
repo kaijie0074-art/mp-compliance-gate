@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="chat-box">
+    <view class="message" wx:for="{{messages}}" wx:key="index">
+      <text>{{item.from === 'user' ? item.content : '小助手：' + item.content}}</text>
+    </view>
+  </view>
+  <view class="input-area">
+    <input type="text" class="input-text" placeholder="请输入你的问题..." bindinput="onInput" bindconfirm="onSend"/>
+    <button class="send-button" bindtap="onSend">发送</button>
+  </view>
+</view>

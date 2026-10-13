@@ -16,10 +16,21 @@ export default {
     if (ctx.checklistError) {
       return [{ file: "compliance/checklist.yaml", detail: `${ctx.checklistError}——材料齐备性无法机械确认，需人工核对` }];
     }
-    if (!ctx.checklist || !Array.isArray(ctx.checklist.materials)) {
-      return [{ file: "compliance/checklist.yaml", detail: "缺少提审材料清单文件（深度合成类目材料无人跟踪）" }];
+    let materials = null;
+    if (ctx.checklist && Array.isArray(ctx.checklist.materials)) materials = ctx.checklist.materials;
+    else if (ctx.checklist && Array.isArray(ctx.checklist.items)) materials = ctx.checklist.items; // Q6 语料变体
+    else if (Array.isArray(ctx.checklist)) materials = ctx.checklist; // Q6 语料变体：顶层数组
+    if (!materials) {
+      return [
+        {
+          file: "compliance/checklist.yaml",
+          detail: ctx.checklist
+            ? "清单文件结构不符合约定（需 materials: 列表，每项 id/name/status）——材料齐备性无法机械确认，需人工核对"
+            : "缺少提审材料清单文件（深度合成类目材料无人跟踪）",
+        },
+      ];
     }
-    for (const m of ctx.checklist.materials) {
+    for (const m of materials) {
       if (m.required !== false && !READY.test(String(m.status ?? ""))) {
         findings.push({
           file: "compliance/checklist.yaml",

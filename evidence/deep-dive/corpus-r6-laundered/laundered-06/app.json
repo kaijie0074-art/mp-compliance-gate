@@ -1,0 +1,6 @@
+{
+  "pages": [
+    "pages/chat/chat",
+    "pages/helper/helper"
+  ]
+}

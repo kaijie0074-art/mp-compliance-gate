@@ -72,3 +72,39 @@ export function extractJson(text) {
   }
   throw new Error(`无法解析 JSON 输出: ${text.slice(0, 200)}`);
 }
+
+/** 解析 ===FILE===/===MANIFEST=== 标记格式输出 → { files, embedded_violations } */
+export function parseMarkers(text) {
+  const files = {};
+  const re = /===FILE (.+?)===\r?\n([\s\S]*?)(?=\r?\n===FILE |===MANIFEST===|$)/g;
+  let m;
+  while ((m = re.exec(text))) {
+    files[m[1].trim()] = m[2].replace(/\s+$/, "");
+  }
+  const mani = text.split("===MANIFEST===")[1] ?? "";
+  const violations = [];
+  // 模型可能每行输出一个数组，也可能一个多行数组——两种策略都试
+  for (const line of mani.split("\n")) {
+    const t = line.trim();
+    if (!t.startsWith("[")) continue;
+    try {
+      const v = JSON.parse(t);
+      if (Array.isArray(v)) violations.push(...v);
+    } catch {
+      /* skip line */
+    }
+  }
+  if (violations.length === 0) {
+    const s = mani.indexOf("[");
+    const e = mani.indexOf("]");
+    if (s !== -1 && e > s) {
+      try {
+        const v = JSON.parse(mani.slice(s, e + 1));
+        if (Array.isArray(v)) violations.push(...v);
+      } catch {
+        /* give up */
+      }
+    }
+  }
+  return { files, embedded_violations: violations };
+}

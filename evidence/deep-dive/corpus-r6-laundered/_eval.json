@@ -1,0 +1,258 @@
+{
+  "summary": {
+    "corpus": "corpus-r6-laundered",
+    "samples": 8,
+    "adversarial": 8,
+    "escapedSamples": 0,
+    "fullyEscapedSamples": 2,
+    "perRule": {
+      "AIG01": {
+        "embedded": 0,
+        "caught": 0
+      },
+      "AIG02": {
+        "embedded": 0,
+        "caught": 0
+      },
+      "NET01": {
+        "embedded": 0,
+        "caught": 0
+      },
+      "REG01": {
+        "embedded": 0,
+        "caught": 0
+      },
+      "BASE01": {
+        "embedded": 0,
+        "caught": 0
+      }
+    },
+    "otherCategories": {
+      "未分类": 8
+    }
+  },
+  "rows": [
+    {
+      "id": "laundered-01",
+      "embedded": 1,
+      "manifest": [
+        {
+          "laundered": true,
+          "residual_signals": "自查：你还留下了哪些可能暴露 AI 特征的信号（如实写，没有就写 none）"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "OTHER"
+        }
+      ],
+      "firedRules": [],
+      "blockers": 0,
+      "findings": [],
+      "blockerHints": 0,
+      "escaped": false,
+      "fullyEscaped": true
+    },
+    {
+      "id": "laundered-02",
+      "embedded": 1,
+      "manifest": [
+        {
+          "laundered": true,
+          "residual_signals": "自查：你还留下了哪些可能暴露 AI 特征的信号（如实写，没有就写 none）"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "OTHER"
+        }
+      ],
+      "firedRules": [
+        "REG01"
+      ],
+      "blockers": 1,
+      "findings": [
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "清单文件结构不符合约定（需 materials: 列表，每项 id/name/status）——材料齐备性无法机械确认，需人工核对"
+        }
+      ],
+      "blockerHints": 0,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "laundered-03",
+      "embedded": 1,
+      "manifest": [
+        {
+          "laundered": true,
+          "residual_signals": "自查：你还留下了哪些可能暴露 AI 特征的信号（如实写，没有就写 none）"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "OTHER"
+        }
+      ],
+      "firedRules": [
+        "AIG01"
+      ],
+      "blockers": 1,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/chat/chat.wxml",
+          "detail": "结构判定：页面 pages/chat/chat 呈现 AI 生成内容（AI API/业务文案信号）但界面未见「内容由 AI 生成」显著提示——启发式判定，误报请人工复核"
+        }
+      ],
+      "blockerHints": 0,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "laundered-04",
+      "embedded": 1,
+      "manifest": [
+        {
+          "laundered": true,
+          "residual_signals": "自查：你还留下了哪些可能暴露 AI 特征的信号（如实写，没有就写 none）"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "OTHER"
+        }
+      ],
+      "firedRules": [
+        "REG01"
+      ],
+      "blockers": 1,
+      "findings": [
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "清单文件结构不符合约定（需 materials: 列表，每项 id/name/status）——材料齐备性无法机械确认，需人工核对"
+        }
+      ],
+      "blockerHints": 0,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "laundered-05",
+      "embedded": 1,
+      "manifest": [
+        {
+          "laundered": true,
+          "residual_signals": "自查：你还留下了哪些可能暴露 AI 特征的信号（如实写，没有就写 none）"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "OTHER"
+        }
+      ],
+      "firedRules": [
+        "REG01"
+      ],
+      "blockers": 1,
+      "findings": [
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "compliance/checklist.yaml 无法解析：YAML 语法错误 第 1 行: ```yaml——材料齐备性无法机械确认，需人工核对"
+        }
+      ],
+      "blockerHints": 0,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "laundered-06",
+      "embedded": 1,
+      "manifest": [
+        {
+          "laundered": true,
+          "residual_signals": "自查：你还留下了哪些可能暴露 AI 特征的信号（如实写，没有就写 none）"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "OTHER"
+        }
+      ],
+      "firedRules": [],
+      "blockers": 0,
+      "findings": [],
+      "blockerHints": 0,
+      "escaped": false,
+      "fullyEscaped": true
+    },
+    {
+      "id": "laundered-07",
+      "embedded": 1,
+      "manifest": [
+        {
+          "laundered": true,
+          "residual_signals": "自查：你还留下了哪些可能暴露 AI 特征的信号（如实写，没有就写 none）"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "OTHER"
+        }
+      ],
+      "firedRules": [
+        "REG01"
+      ],
+      "blockers": 1,
+      "findings": [
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "清单文件结构不符合约定（需 materials: 列表，每项 id/name/status）——材料齐备性无法机械确认，需人工核对"
+        }
+      ],
+      "blockerHints": 0,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "laundered-08",
+      "embedded": 1,
+      "manifest": [
+        {
+          "laundered": true,
+          "residual_signals": "自查：你还留下了哪些可能暴露 AI 特征的信号（如实写，没有就写 none）"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "OTHER"
+        }
+      ],
+      "firedRules": [
+        "REG01"
+      ],
+      "blockers": 1,
+      "findings": [
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "compliance/checklist.yaml 无法解析：YAML 语法错误 第 1 行: ---——材料齐备性无法机械确认，需人工核对"
+        }
+      ],
+      "blockerHints": 0,
+      "escaped": false,
+      "fullyEscaped": false
+    }
+  ]
+}

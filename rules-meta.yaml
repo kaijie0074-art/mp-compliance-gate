@@ -21,7 +21,7 @@ rules:
     name: 深度合成类目提审材料齐备
     severity: blocker
     basis: 微信平台深度合成类目要求（仅非个人主体）+ 模型技术方算法备案材料
-    fix: compliance/checklist.yaml 中全部 required 材料 status=ready（营业执照、技术方备案文件、标识样式截图、协议文本）
+    fix: compliance/checklist.yaml 中全部 required 材料就绪（status=ready 及 checked/completed/已就绪 等同义词；营业执照、技术方备案文件、标识样式截图、协议文本）
   - id: BASE01
     name: 基础库版本门槛（云开发 AI ≥ 3.15.1）
     severity: warning

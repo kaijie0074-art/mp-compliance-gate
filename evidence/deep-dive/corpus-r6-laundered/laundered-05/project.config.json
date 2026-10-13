@@ -1,0 +1,37 @@
+{
+  "setting": {
+    "urlCheck": true
+  },
+  "appid": "wx<your-app-id>",
+  "projectname": "redteam-ai-wash",
+  "debug": true,
+  "cloudfunctionTemplateRoot": "cloudfunctionsTemplate",
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    }
+  },
+  "miniprogramRoot": "miniprogram",
+  "scripts": [],
+  "description": "Red Team AI Wash Project",
+  "packOptions": {
+    "ignore": []
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.18.0",
+  "editorSetting": {
+    "tabSize": 2,
+    "tabIndents": 2,
+    "indentWidth": 2
+  },
+  "condition": {
+    "plugin": {
+      "list": []
+    }
+  }
+}

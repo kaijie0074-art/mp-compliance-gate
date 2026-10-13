@@ -1,0 +1,51 @@
+{
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "appInfo": {
+    "name": "MyApp",
+    "versionName": "1.0.0",
+    "versionCode": "100",
+    "qcloudAppId": "your_qcloud_appid",
+    "qcloudSecretId": "your_qcloud_secret_id",
+    "qcloudSecretKey": "your_qcloud_secret_key",
+    "app-plus": {
+      "usingComponents": true
+    },
+    "projectname": "myapp",
+    "appid": "your_appid",
+    " BundName": "default",
+    "networkTimeout": {
+      "request": 10000,
+      "connectSocket": 10000,
+      "uploadFile": 10000,
+      "downloadFile": 10000
+    },
+    "subPackages": [
+      {
+        "root": "pages",
+        "pages": [
+          "chat/chat",
+          "helper/helper"
+        ]
+      }
+    ],
+    "cloudfunction": "cloudfunctions",
+    "staticSource": "static",
+    "condition": {
+      "search": {
+        "templateId": "search"
+      },
+      "devtools": true
+    },
+    "debug": true
+  },
+  "compileOption": {
+    "miniprogramRoot": "miniprogram/",
+    "compileType": "miniprogram"
+  }
+}

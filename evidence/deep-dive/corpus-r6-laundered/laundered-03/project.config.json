@@ -1,0 +1,24 @@
+{
+  "miniprogramRoot": "src/",
+  "projectname": "laundered-app",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "scripts": [],
+  "description": "项目配置文件",
+  "app-plus": {
+    "usingComponents": {}
+  },
+  "condition": {
+    "search": {
+      "templateId": "index"
+    }
+  },
+  "debugOptions": {
+    "hidedInDevtools": []
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "setting": {
+    "urlCheck": true
+  },
+  "miniprogramRoot": "src/",
+  "projectname": "laundered-app",
+  "appid": "your-app-id",
+  "version": "1.0.0",
+  "description": "A mini-program for providing various services.",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "minified": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.16.0",
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "current": -1,
+      "list": []
+    },
+    "miniprogram": {
+      "current": -1,
+      "list": []
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "miniprogramRoot": "src/",
+  "projectname": "laundered-app",
+  "appid": "your-app-id",
+  "qcloudAppId": "your-qcloud-app-id",
+  "version": "0.0.1",
+  "setting": {
+    "urlCheck": true
+  },
+  "condition": {
+    "miniprogram": {
+      "current": 0,
+      "list": [
+        {
+          "name": "chat",
+          "pathName": "pages/chat/chat",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

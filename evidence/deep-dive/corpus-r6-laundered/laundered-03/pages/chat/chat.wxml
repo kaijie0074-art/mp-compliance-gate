@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="input-group">
+    <input class="input-field" placeholder="输入你的问题..." bindinput="onInput"/>
+    <button class="submit-btn" bindtap="submitQuestion">发送</button>
+  </view>
+  <view class="answers-container">
+    <view class="answer" wx:for="{{answers}}" wx:key="index">{{item}}</view>
+  </view>
+</view>

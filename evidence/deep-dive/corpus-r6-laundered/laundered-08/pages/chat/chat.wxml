@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="chat-input">
+    <input placeholder="输入你的问题" bindinput="onInput" class="input-field"/>
+    <button bindtap="submitQuestion">发送</button>
+  </view>
+  <view class="chat-history">
+    <view class="message" wx:for="{{messages}}" wx:key="index">
+      <text wx:if="{{isSelf(message)}}">{{username}}</text>
+      <text>{{message.text}}</text>
+    </view>
+  </view>
+</view>

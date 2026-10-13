@@ -1,0 +1,14 @@
+status: ready
+items:
+  - id: business_license
+    name: 营业执照
+    status: ready
+  - id: technical_record
+    name: 技术方备案
+    status: ready
+  - id: identification_style_screenshot
+    name: 标识样式截图
+    status: ready
+  - id: agreement_text
+    name: 协议文本
+    status: ready

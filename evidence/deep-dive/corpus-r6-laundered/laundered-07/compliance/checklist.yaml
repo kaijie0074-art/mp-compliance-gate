@@ -1,0 +1,9 @@
+compliance:
+  - id: business_license
+    status: ready
+  - id: technical备案
+    status: ready
+  - id: logo_style
+    status: ready
+  - id: agreement_text
+    status: ready

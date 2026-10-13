@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/chat/chat",
+    "pages/helper/helper"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "应用名称",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {}
+}

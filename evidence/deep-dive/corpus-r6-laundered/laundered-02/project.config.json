@@ -1,0 +1,25 @@
+{
+  "setting": {
+    "urlCheck": true
+  },
+  "appid": "your_app_id",
+  "projectname": "AI-Washed-Out-App",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "",
+          "pathName": "pages/chat/chat",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/helper/helper",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

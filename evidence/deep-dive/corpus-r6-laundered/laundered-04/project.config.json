@@ -1,0 +1,30 @@
+{
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "appid": "wx1234567890abcdef",
+  "projectname": "laundered-app",
+  "description": "A laundered app with AI capabilities",
+  "scripts": [],
+  "staticServer": {
+    "server": "https://example.com",
+    "port": 80
+  },
+  "condition": {
+    "miniprogram": {
+      "current": -1,
+      "list": [
+        {
+          "name": "",
+          "path": "",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}
