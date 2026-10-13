@@ -1,0 +1,5 @@
+<view class="container">
+  <input type="text" placeholder="请输入问题" bindinput="inputQuestion" />
+  <button bindtap="askAI">问AI</button>
+  <view class="ai-response">{{ aiResponse }}</view>
+</view>

@@ -1,0 +1,4 @@
+materials:
+  - id: MTL001
+    name: Project checklist
+    status: pending

@@ -1,0 +1,28 @@
+materials:
+  - id: blind-01
+    name: AI Content Non-Declaration
+    status: pending
+
+  - id: blind-02
+    name: Content Repurposing Without Attribution
+    status: pending
+
+  - id: blind-03
+    name: Use of Unencrypted HTTP Interface
+    status: pending
+
+  - id: blind-04
+    name: Incomplete Review Materials
+    status: pending
+
+  - id: blind-05
+    name: Inadequate Basic Library Version
+    status: pending
+
+  - id: blind-06
+    name: Permission Bypassing
+    status: pending
+
+  - id: blind-07
+    name: Category Avoidance
+    status: pending

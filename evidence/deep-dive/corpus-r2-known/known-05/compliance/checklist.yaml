@@ -1,0 +1,14 @@
+materials:
+  - id: license
+    name: "营业执照"
+    status: "ready"
+  - id: algorithm
+    name: "算法备案文件"
+    status: "ready"
+  - id: style
+    name: "标识样式截图"
+    status: "ready"
+  - id: agreement
+    name: "协议文本"
+    status: "ready"
+<yaml 完整内容>

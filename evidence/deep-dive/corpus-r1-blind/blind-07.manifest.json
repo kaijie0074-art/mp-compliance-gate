@@ -1,0 +1,27 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01",
+    "description": "在 pages/ai/ai.js 文件的第 12 行，请求了未标记AI生成内容的接口。这可能会导致微信审核时判定为违规。真实情况中，如果没有正确标识AI生成内容，可能会被要求下架。",
+    "category": "内容安全"
+  },
+  {
+    "rule_hint": "REG01|BASE01",
+    "description": "在 pages/ai/ai.js 文件的第 16 行，使用了明文http接口进行网络请求，这违反了微信小程序的安全规范。应该使用https加密传输。如果没有修复这个问题，小程序可能会被下架。",
+    "category": "网络安全"
+  },
+  {
+    "rule_hint": "BASE01",
+    "description": "在 project.config.json 文件的 setting 部分中，编译类型被设置为 'miniprogram'，但没有指定版本号，这可能会因为使用了旧版基础库而遇到兼容性问题。应该指定正确的版本号，否则可能会导致功能无法正常使用。",
+    "category": "基础库版本问题"
+  },
+  {
+    "rule_hint": "NET01",
+    "description": "在 app.json 文件中，没有设置页面相关的配置项，如navigationBarBackgroundColor、navigationBarTitleText等。虽然这不是直接的违规，但缺乏页面配置可能会影响用户体验，并可能导致小程序被下架。",
+    "category": "页面配置问题"
+  },
+  {
+    "rule_hint": "OTHER",
+    "description": "在 pages/ai/ai.wxml 文件中，简单地声明了这是AI问答小程序，但缺乏具体的业务描述或合规声明。在真实情况下，如果微信审核方注意到这一点，可能会要求提供更详细的业务说明和合规证明。",
+    "category": "材料造假"
+  }
+]

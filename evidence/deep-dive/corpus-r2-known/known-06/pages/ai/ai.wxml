@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="ai-chat">
+    <!-- AI 生成内容，未显式标识 -->
+    <text>您好，我是 AI，有什么可以帮助您的？</text>
+  </view>
+  <!-- 其他组件 -->
+</view>

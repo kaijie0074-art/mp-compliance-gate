@@ -1,0 +1,16 @@
+materials:
+  - id: M001
+    name: 材料准备齐全
+    status: done
+  - id: M002
+    name: 版本更新
+    status: done
+  - id: M003
+    name: 内容安全
+    status: done
+  - id: M004
+    name: 隐私保护
+    status: done
+```
+
+```plaintext

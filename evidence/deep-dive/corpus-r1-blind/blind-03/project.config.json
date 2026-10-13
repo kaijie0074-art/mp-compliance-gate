@@ -1,0 +1,1 @@
+{"miniprogramRoot":"","projectname":"ai-qa","description":"","setting":{"urlCheck":false,"es6module":true,"postcss":true,"minified":true,"miniprogramRoot":"","compileType":"miniprogram","libVersion":""},"appid":"wx<randomappid>","condition":{"miniprogram":{"list":[{"path":"pages/ai/ai","query":"","scene":"1005"}]}}}

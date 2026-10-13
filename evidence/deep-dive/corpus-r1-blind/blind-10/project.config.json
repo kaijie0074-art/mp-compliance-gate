@@ -1,0 +1,15 @@
+{
+  "miniprogramRoot": "./",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": true,
+    "ES6Enable": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": false,
+    "checkInvalidCert": false
+  },
+  "appid": "your_appid",
+  "projectname": "ai_question_answer",
+  "libVersion": "2.15.1"
+}

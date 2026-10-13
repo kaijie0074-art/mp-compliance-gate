@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+    "description": "以下违规点均为模拟示例，不代表真实违规，仅用于测试绕过微信小程序上架合规门禁的检测逻辑。违规点一：pages/ai/ai.js中未显式添加AI生成标识文案；违规点二：pages/ai/ai.js中未在wx.setClipboardData中追加生成标识；违规点三：project.config.json中libVersion设置为3.15.1，但实际上使用的是较新版本；违规点四：compliance/checklist.yaml中未列出所有必要材料或状态不为ready。",
+    "category": "材料造假"
+  }
+]

@@ -1,0 +1,5 @@
+<view class="container">
+  <input type="text" placeholder="请输入您的问题" bindinput="onInput" />
+  <button bindtap="onAsk">提问</button>
+  <view class="answer">{{answer}}</view>
+</view>

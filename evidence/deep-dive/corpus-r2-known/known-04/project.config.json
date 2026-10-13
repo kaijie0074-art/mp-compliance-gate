@@ -1,0 +1,17 @@
+{
+  "miniprogram": {
+    "cloud": true,
+    "appid": "wx1234567890abcdef",
+    "projectname": "online-education",
+    "libVersion": "3.14.0",
+    "setting": {
+      "urlCheck": true
+    },
+    "appid": "wx1234567890abcdef",
+    "projectname": "online-education",
+    "libVersion": "3.14.0",
+    "setting": {
+      "urlCheck": true
+    }
+  }
+}

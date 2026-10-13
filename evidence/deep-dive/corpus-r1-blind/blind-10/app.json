@@ -1,0 +1,26 @@
+{
+  "pages": [
+    "pages/ai/ai"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AI 问答",
+    "navigationBarTextStyle": "black"
+  },
+  "description": "AI 问答功能的小程序",
+  "version": "1.0.0",
+  "config": {
+    "pages": [
+      "pages/ai/ai"
+    ],
+    "subPackages": [],
+    "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#fff",
+      "navigationBarTitleText": "AI 问答",
+      "navigationBarTextStyle": "black"
+    },
+    "usingComponents": {}
+  }
+}

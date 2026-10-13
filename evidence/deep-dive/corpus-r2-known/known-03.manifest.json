@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+    "description": "此样本故意省略AI生成内容标识以绕过AIG01规则，关闭域名检查以绕过NET01规则，使用低于基础库版本以绕过BASE01规则，并故意不提供某些深度合成类目材料以绕过REG01规则。藏在ai.js第5行、project.config.json第7行、app.json第1行附近、compliance/checklist.yaml文件中。违规原因包括AI内容未标识、网络请求不安全、基础库版本不符合要求、提审材料不齐全。",
+    "category": "内容安全"
+  }
+]

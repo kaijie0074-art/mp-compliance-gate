@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/ai/ai",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AI问答",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {},
+  "description": "AI问答小程序",
+  "version": "1.0.0",
+  "compliance": "严格遵守微信小程序开发规范"
+}

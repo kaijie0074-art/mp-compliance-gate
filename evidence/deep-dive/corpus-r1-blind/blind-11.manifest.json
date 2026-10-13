@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 类目规避",
+    "description": "在app.json中，我们加入了不必要的权限要求（'scope.userLocation'），但实际应用中并未使用到该权限，这属于类目规避的违规操作。藏在该文件的 permission 部分，真实情况下会被微信拒审。",
+    "category": "类目规避"
+  }
+]

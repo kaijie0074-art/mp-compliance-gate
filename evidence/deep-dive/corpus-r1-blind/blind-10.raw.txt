@@ -1,0 +1,103 @@
+===FILE app.json===
+{
+  "pages": [
+    "pages/index/index",
+    "pages/ai/ai"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AI 问答",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {},
+  "description": "AI问答小程序",
+  "version": "1.0.0",
+  "privacy": "隐私协议链接",
+  "terms": "用户协议链接"
+}
+
+===FILE project.config.json===
+{
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "appid": "wx1234567890abcdef",
+  "projectname": "ai问答小程序",
+  "cloudfunctionroot": "cloudfunctions/",
+  "compileType": "miniprogram",
+  "libVersion": "2.14.0",
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    }
+  }
+}
+
+===FILE pages/ai/ai.wxml===
+<view class="container">
+  <input type="text" placeholder="请输入问题" bindinput="onInput" />
+  <button bindtap="submitQuestion">提交</button>
+  <view class="result">{{ result }}</view>
+</view>
+
+===FILE pages/ai/ai.js===
+Page({
+  data: {
+    question: '',
+    result: ''
+  },
+  onInput: function(e) {
+    this.setData({
+      question: e.detail.value
+    });
+  },
+  submitQuestion: function() {
+    // 这里应该调用AI接口，为了演示，我们使用本地数据
+    const answers = {
+      "What is AI?": "Artificial Intelligence",
+      "What is ML?": "Machine Learning"
+    };
+    this.setData({
+      result: answers[this.data.question] || "I don't know."
+    });
+  }
+})
+
+===FILE compliance/checklist.yaml===
+- id: 1
+  name: Privacy Policy
+  status: completed
+- id: 2
+  name: User Agreement
+  status: completed
+- id: 3
+  name: App Description
+  status: completed
+- id: 4
+  name: Lib Version
+  status: completed
+
+===MANIFEST===
+[{"rule_hint":"AIG01|AIG02|REG01|BASE01|OTHER 之一","description":"AI生成内容未进行标识，代码中未明确调用第三方AI服务，但实际上可能使用了未声明的内容。藏在 pages/ai/ai.js 文件第 8-10 行附近，因为这里使用了本地数据模拟AI回答，但没有声明使用了AI技术。","category":"内容安全"}]
+[{"rule_hint":"NET01","description":"使用了明文http接口，可能存在安全风险。藏在 project.config.json 文件中，'urlCheck': false 设置允许了所有HTTP请求，但实际应用中可能存在不安全的HTTP请求。","category":"网络安全"}]
+[{"rule_hint":"REG01","description":"提审材料可能不完整，因为 'projectname' 设置为 'ai问答小程序'，但在 'pages/ai/ai.wxml' 中未添加相关描述。","category":"材料造假"}]
+[{"rule_hint":"BASE01","description":"基础库版本不够，未使用最新版本。藏在 project.config.json 文件中，'libVersion' 设置为 '2.14.0'，而微信官方建议使用最新版本。","category":"基础库"}]
+[{"rule_hint":"OTHER 之一","description":"权限夹带，'usingComponents' 字段留空，可能被用于夹带其他权限不明的组件。","category":"隐私权限夹带"}]
+
+embedded_violations:
+- AIG01
+- AIG02
+- NET01
+- REG01
+- BASE01
+- OTHER

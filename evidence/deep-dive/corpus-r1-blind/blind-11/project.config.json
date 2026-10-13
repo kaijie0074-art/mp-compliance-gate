@@ -1,0 +1,25 @@
+{
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "autoAudits": false,
+    "coverView": true,
+    "es7": true,
+    "nodeModules": true
+  },
+  "miniprogram": {
+    "debugOptions": {
+      "hidedInDevtools": []
+    }
+  },
+  "compileOptions": {
+    "sourceMap": true,
+    "target": "es6",
+    "newFeatures": false,
+    "module": "commonjs",
+    "baseUrl": "."
+  }
+}

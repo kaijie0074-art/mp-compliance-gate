@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/ai/ai",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AI问答",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {},
+  "description": "AI问答小程序",
+  "version": "1.0.0",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于定位你的位置"
+    }
+  },
+  "requiredBackgroundModes": ["audio"],
+  "requiredSetting": {
+    "location": "always"
+  }
+}

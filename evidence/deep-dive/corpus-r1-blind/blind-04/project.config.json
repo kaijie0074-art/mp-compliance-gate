@@ -1,0 +1,11 @@
+{
+  "setting": {
+    "urlCheck": true,
+    "es6ModuleEnabled": true,
+    "miniprogramRoot": "",
+    "compileHotReLoad": false
+  },
+  "miniprogram": {
+    "cloudSymbolConfig": {}
+  }
+}

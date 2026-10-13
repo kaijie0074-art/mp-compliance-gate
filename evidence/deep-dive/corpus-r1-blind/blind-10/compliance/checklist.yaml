@@ -1,0 +1,12 @@
+- id: 1
+  name: App Info
+  status: Passed
+- id: 2
+  name: Data Policy
+  status: Passed
+- id: 3
+  name: Content Approval
+  status: Passed
+- id: 4
+  name: Technical Check
+  status: Passed

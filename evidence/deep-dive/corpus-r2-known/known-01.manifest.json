@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+    "description": "这处埋的违规是什么、藏在哪个文件哪一行附近、为什么真实世界会被微信拒审",
+    "category": "若 rule_hint=OTHER 给违规类别短词（隐私权限夹带/类目规避/虚拟支付/诱导分享/内容安全/材料造假）"
+  }
+]

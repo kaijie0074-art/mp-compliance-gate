@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/ai/ai",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AI问答",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {},
+  "description": "AI问答功能小程序",
+  "author": "资深外包开发者",
+  "version": "1.0",
+  "compliance": {
+    "statements": [
+      "此小程序内容均由人工智能生成，所有权归人工智能所有。",
+      "本小程序使用第三方AI服务，不承担任何第三方服务内容的责任。"
+    ]
+  }
+}

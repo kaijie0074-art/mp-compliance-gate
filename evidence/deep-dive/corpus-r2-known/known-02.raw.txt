@@ -1,0 +1,81 @@
+```yaml
+<yaml 完整内容>
+materials:
+  - id: "business_license"
+    name: "营业执照"
+    status: "ready"
+  - id: "tech_party_license"
+    name: "技术方备案文件"
+    status: "pending"
+  - id: "label_style_screenshot"
+    name: "标识样式截图"
+    status: "ready"
+  - id: "protocol_text"
+    name: "协议文本"
+    status: "ready"
+```
+
+```json
+{
+  "pages": [
+    "pages/ai/ai"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AI 辅助工具",
+    "navigationBarTextStyle": "black"
+  }
+}
+```
+
+```json
+{
+  "libVersion": "3.15.1",
+  "appid": "wx1234567890abcdef",
+  "projectname": "example-project",
+  "setting": {
+    "urlCheck": true
+  }
+}
+```
+
+```xml
+<wxml 完整内容>
+<view class="ai-container">
+  <text class="ai-result">这是由AI生成的结果：{{result}}</text>
+</view>
+```
+
+```javascript
+// pages/ai/ai.js
+Page({
+  data: {
+    result: "这是AI生成的结果内容。"
+  },
+  onLoad: function() {
+    // 假设这里调用了AI服务，返回了结果
+  }
+});
+```
+
+```json
+[
+  {
+    "rule_hint": "AIG01|REG01",
+    "description": "这处埋的违规是什么、藏在哪个文件哪一行附近、为什么真实世界会被微信拒审",
+    "category": "若 rule_hint=OTHER 给违规类别短词（隐私权限夹带/类目规避/虚拟支付/诱导分享/内容安全/材料造假）"
+  }
+]
+```
+
+ embedded_violations:
+- {
+  "violation": "REG01 深度合成类目提审材料齐备",
+  "evasion_reason": "故意将技术方备案文件的状态设置为 pending，以模拟材料未准备完毕的情况，绕过门禁检测"
+}
+- {
+  "violation": "AIG01 AI 生成内容显式标识（交互界面）",
+  "evasion_reason": "故意没有在 ai.wxml 中添加 AI 生成标识文案，绕过门禁检测逻辑"
+}
+```

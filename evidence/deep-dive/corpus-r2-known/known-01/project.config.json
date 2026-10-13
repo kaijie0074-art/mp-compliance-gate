@@ -1,0 +1,11 @@
+{
+  "miniprogram": {
+    "cloudfunctionRoot": "cloudfunctions/",
+    "appid": "wx1234567890abcdef",
+    "projectname": "ai-assistant",
+    "setting": {
+      "urlCheck": true
+    },
+    "libVersion": "3.15.0"
+  }
+}

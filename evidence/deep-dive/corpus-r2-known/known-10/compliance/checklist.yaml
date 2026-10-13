@@ -1,0 +1,14 @@
+materials:
+- id:营业执照
+  name:营业执照
+  status: ready
+- id:技术方备案文件
+  name:技术方备案文件
+  status: ready
+- id:标识样式截图
+  name:标识样式截图
+  status: ready
+- id:协议文本
+  name:协议文本
+  status: ready
+<yaml 完整内容>

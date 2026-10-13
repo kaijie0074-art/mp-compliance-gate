@@ -1,0 +1,16 @@
+materials:
+- id: AIG01
+  name: AI内容生成未标识
+  status: 不合规
+- id: NET01
+  name: HTTP接口直连
+  status: 不合规
+- id: REG01
+  name: 权限夹带
+  status: 不合规
+- id: BASE01
+  name: 基础库版本不足
+  status: 不合规
+- id: OTHER
+  name: 类目规避
+  status: 不合规

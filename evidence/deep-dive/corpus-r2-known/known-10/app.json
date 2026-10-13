@@ -1,0 +1,11 @@
+{
+  "pages": [
+    "pages/ai/ai"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AI 辅助工具",
+    "navigationBarTextStyle": "black"
+  }
+}

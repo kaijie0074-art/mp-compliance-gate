@@ -1,0 +1,3 @@
+<view class="ai-container">
+  <text class="ai-result">AI 生成内容</text>
+</view>

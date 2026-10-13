@@ -1,0 +1,104 @@
+===FILE app.json===
+{
+  "pages": [
+    "pages/index/index",
+    "pages/ai/ai"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AI 问答",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {},
+  "description": "AI问答小程序",
+  "version": "1.0.0",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于定位服务"
+    }
+  },
+  "compliance": {
+    "statement": "本应用不存储用户数据，所有数据仅用于本应用内处理。"
+  }
+}
+===FILE project.config.json===
+{
+  "miniprogramRoot": "./",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "appname": "ai-qa-miniprogram",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "nodeModules": true
+  },
+  "scripts": [],
+  "miniprogram": {
+    "registerComponents": true,
+    "usingComponents": {}
+  },
+  "compileType": "miniprogram"
+}
+===FILE pages/ai/ai.wxml===
+<view class="container">
+  <input type="text" placeholder="请输入问题" bindinput="onInput" />
+  <button bindtap="onQuery">提问</button>
+  <view class="result">{{result}}</view>
+</view>
+===FILE pages/ai/ai.js===
+Page({
+  data: {
+    question: '',
+    result: ''
+  },
+  onInput: function(e) {
+    this.setData({
+      question: e.detail.value
+    });
+  },
+  onQuery: function() {
+    wx.request({
+      url: 'http://example.com/api/ai',
+      method: 'GET',
+      data: {
+        question: this.data.question
+      },
+      success: (res) => {
+        this.setData({
+          result: res.data.answer
+        });
+      }
+    });
+  }
+})
+===FILE compliance/checklist.yaml===
+- id: 1
+  name: "Privacy Statement"
+  status: "Completed"
+- id: 2
+  name: "Location Permission"
+  status: "Completed"
+- id: 3
+  name: "API Security"
+  status: "Incomplete"
+- id: 4
+  name: "Content Security"
+  status: "Incomplete"
+- id: 5
+  name: "Material Preparation"
+  status: "Incomplete"
+===MANIFEST===
+[{"rule_hint":"AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一","description":"AI 生成内容不标识，藏在 pages/ai/ai.js 文件第 11 行附近，微信要求所有 AI 生成的内容必须进行标识，否则可能被拒审。","category":"内容安全"}]
+[{"rule_hint":"REG01","description":"提审材料没准备却想蒙混，藏在 pages/ai/ai.js 文件第 15 行附近，微信要求提审时必须准备所有相关材料，否则可能被拒审。","category":"材料造假"}]
+[{"rule_hint":"NET01","description":"明文 http 接口或 IP 直连，藏在 pages/ai/ai.js 文件第 12 行附近，微信要求使用 https 协议或进行 IP 白名单设置，明文 http 接口可能导致安全问题，所以会被拒审。","category":"安全漏洞"}]
+[{"rule_hint":"AIG01","description":"AI 生成内容不标识，藏在 pages/ai/ai.wxml 文件第 3 行附近，微信要求所有 AI 生成的内容必须进行标识，否则可能被拒审。","category":"内容安全"}]
+[{"rule_hint":"BASE01","description":"基础库版本不够，藏在 project.config.json 文件第 6 行附近，微信要求使用最新版本的基础库，否则可能被拒审。","category":"基础库版本"}]
+embedded_violations:
+- "pages/ai/ai.js": 11
+- "pages/ai/ai.js": 15
+- "pages/ai/ai.js": 12
+- "pages/ai/ai.wxml": 3
+- "project.config.json": 6

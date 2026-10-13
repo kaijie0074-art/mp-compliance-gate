@@ -1,0 +1,6 @@
+<view class="container">
+  <text>欢迎来到AI聊天室</text>
+  <input class="input" placeholder="请输入你的问题" bindinput="onInput"/>
+  <button bindtap="send">发送</button>
+  <view class="ai-answer">{{ answer }}</view>
+</view>

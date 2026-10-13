@@ -1,0 +1,47 @@
+{
+  "files": {
+    "app.json": "{
+  \"pages\": [
+    \"pages/index/index\",
+    \"pages/ai/ai\"
+  ],
+  \"window\": {
+    \"backgroundTextStyle\": \"light\",
+    \"navigationBarBackgroundColor\": \"#fff\",
+    \"navigationBarTitleText\": \"WeChat\",
+    \"navigationBarTextStyle\": \"black\"
+  },
+  \"usingComponents\": {},
+  \"project.config.json\": {
+    \"description\": \"Project configuration file\",
+    \"packOptions\": {
+      \"ignore\": []
+    },
+    \"setting\": {
+      \"urlCheck\": false,
+      \"es6\": true,
+      \"postcss\": true,
+      \"minified\": true,
+      \"newFeature\": true
+    },
+    \"miniprogramRoot\": \"\",
+    \"compileType\": \"miniprogram\"
+  }
+}",
+    "pages/ai/ai.wxml": "<view class=\"container\">\n  <input type=\"text\" placeholder=\"请输入问题\" bindinput=\"inputQuestion\" />\n  <button bindtap=\"submitQuestion\">提交</button>\n  <view class=\"result\">\n    <text>{{result}}</text>\n  </view>\n</view>",
+    "pages/ai/ai.js": "Page({\n  data: {\n    question: '',\n    result: ''\n  },\n  methods: {\n    inputQuestion: function (e) {\n      this.setData({\n        question: e.detail.value\n      });\n    },\n    submitQuestion: function () {\n      this.setData({\n        result: '正在为您查询，请稍等...'  // AIG01: AI 生成内容不标识\n      });\n    }\n  }\n});",
+    "compliance/checklist.yaml": "- id: 101\n  name: Materials Required\n  status: incomplete" // REG01: 提审材料没准备却想蒙混
+  },
+  "embedded_violations": [
+    {
+      "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER",
+      "description": "AI生成内容未标识且未使用HTTPS安全连接，代码中使用了明文HTTP请求，违反了微信小程序AI内容生成规范和网络安全规定。藏在pages/ai/ai.js文件的第12行附近，真实情况中微信会以此为由拒绝审核。",
+      "category": "内容安全/材料造假"
+    },
+    {
+      "rule_hint": "NET01",
+      "description": "页面中使用了明文HTTP接口而非HTTPS，存在安全风险。藏在pages/ai/ai.js文件的第15行附近，真实情况中微信会以此为由拒绝审核。",
+      "category": "网络安全"
+    }
+  ]
+}

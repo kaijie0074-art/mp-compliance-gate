@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|REG01|NET01|BASE01|OTHER",
+    "description": "这处埋的违规包括AI生成内容未标识（AI问答未显示来源），使用明文HTTP接口（app.js中url不加密），基础库版本不够（project.config.json中libVersion未指定），类目规避（未明确声明问答类目），以及隐私权限夹带（未经用户同意访问网络）。",
+    "category": "内容安全/材料造假/网络连接/基础库/隐私权限夹带"
+  }
+]

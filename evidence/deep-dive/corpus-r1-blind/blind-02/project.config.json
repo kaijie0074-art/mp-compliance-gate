@@ -1,0 +1,16 @@
+{
+  "miniprogram": {
+    "projectname": "ai_question_answering",
+    "appid": "wx1234567890abcdef",
+    "setting": {
+      "urlCheck": false
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.8.2"
+  },
+  "scripts": [
+  ],
+  "miniprogramRoot": ".",
+  "cloudfunctionRoot": "cloudfunction/",
+  "description": "AI问答小程序配置文件"
+}

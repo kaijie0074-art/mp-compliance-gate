@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 隐私权限夹带",
+    "description": "AIG01 未显式标识，AIG02 复制内容未追加 AI 标识，NET01 使用了 HTTP 明文请求，REG01 材料未全部准备就绪，BASE01 版本声明在 config.json 中，违规原因见文件具体内容。",
+    "category": "隐私权限夹带/类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+  }
+]

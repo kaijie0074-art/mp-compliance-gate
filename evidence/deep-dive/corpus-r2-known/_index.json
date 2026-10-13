@@ -1,0 +1,51 @@
+{
+  "mode": "known",
+  "n": 12,
+  "jsonFail": 1,
+  "samples": [
+    {
+      "id": "known-01",
+      "violations": 1
+    },
+    {
+      "id": "known-03",
+      "violations": 1
+    },
+    {
+      "id": "known-04",
+      "violations": 0
+    },
+    {
+      "id": "known-05",
+      "violations": 1
+    },
+    {
+      "id": "known-06",
+      "violations": 0
+    },
+    {
+      "id": "known-07",
+      "violations": 1
+    },
+    {
+      "id": "known-08",
+      "violations": 1
+    },
+    {
+      "id": "known-09",
+      "violations": 1
+    },
+    {
+      "id": "known-10",
+      "violations": 1
+    },
+    {
+      "id": "known-11",
+      "violations": 4
+    },
+    {
+      "id": "known-12",
+      "violations": 1
+    }
+  ]
+}

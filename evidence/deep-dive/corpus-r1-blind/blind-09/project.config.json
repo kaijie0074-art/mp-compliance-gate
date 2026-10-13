@@ -1,0 +1,1 @@
+{"miniprogramRoot":"./","projectname":"ai-qa","appid":"wx1234567890abcdef","setting":{"urlCheck":false,"minified":true,"postcss":true,"es6":true,"enhance":true,"nodeModules":true,"packNpmManually":"true","autoAudits":true,"miniprogramRoot":"miniprogram","compileType":"miniprogram","libVersion":"custom","subPackages":[{"root":"pages/ai","pages":["ai.wxml","ai.js"]}]}

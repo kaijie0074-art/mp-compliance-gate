@@ -1,0 +1,14 @@
+materials:
+  - id: "business_license"
+    name: "Business License"
+    status: "ready"
+  - id: "tech_registration"
+    name: "Technology Registration"
+    status: "ready"
+  - id: "label_style"
+    name: "Label Style"
+    status: "ready"
+  - id: "agreement_text"
+    name: "Agreement Text"
+    status: "ready"
+```

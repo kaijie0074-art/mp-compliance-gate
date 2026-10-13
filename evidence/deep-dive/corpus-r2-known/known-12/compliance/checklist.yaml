@@ -1,0 +1,14 @@
+materials:
+- id: "business_license"
+  name: "营业执照"
+  status: "ready"
+- id: "tech_audit"
+  name: "技术方备案文件"
+  status: "ready"
+- id: "label_screenshot"
+  name: "标识样式截图"
+  status: "ready"
+- id: "agreement_text"
+  name: "协议文本"
+  status: "ready"
+```

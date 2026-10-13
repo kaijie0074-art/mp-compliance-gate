@@ -1,0 +1,1 @@
+Page({data:{answers:''},inputQuestion:function(e){this.setData({question:e.detail.value})},submitQuestion:function(){var that = this;wx.request({url:'http://example.com/api/answer',data:{question:that.data.question},success:function(res){that.setData({answers:res.data.answer})}}})}

@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER Category Avoidance",
+    "description": "Category Avoidance is implemented by misrepresenting the business scope. This is done by including a 'compliance' section in app.json that does not accurately reflect the actual content of the app. This is a common way to bypass category restrictions without explicitly mentioning the restricted content. It is a violation because it misleads users and the review process. It is hidden in the app.json file in the 'description' field, which is intended for providing a brief overview of the app's functionality, not for hiding information about the actual content. This is a category violation that could lead to the app being rejected or removed from the store if discovered.",
+    "category": "Category Avoidance"
+  }
+]

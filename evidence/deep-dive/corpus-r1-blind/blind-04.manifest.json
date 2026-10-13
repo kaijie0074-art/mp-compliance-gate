@@ -1,0 +1,12 @@
+[
+  {
+    "rule_hint": "AIG01|REG01|NET01",
+    "description": "在ai.js文件中使用了明文HTTP接口，这是微信审核中明确的违规行为，可能导致小程序被拒审或下架。",
+    "category": "内容安全"
+  },
+  {
+    "rule_hint": "OTHER",
+    "description": "虽然app.json中设置了urlCheck为true，但是pages/ai/ai.js中明文使用http接口，这会导致即使urlCheck生效，由于内容的不合规，小程序依然可能被拒审。",
+    "category": "隐私权限夹带"
+  }
+]

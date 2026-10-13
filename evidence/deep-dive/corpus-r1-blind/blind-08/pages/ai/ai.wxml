@@ -1,0 +1,5 @@
+<view class="container">
+  <text>欢迎来到AI问答</text>
+  <input placeholder="请输入问题" bindinput="bindInputQuestion"/>
+  <button bindtap="sendQuestion">提交问题</button>
+</view>

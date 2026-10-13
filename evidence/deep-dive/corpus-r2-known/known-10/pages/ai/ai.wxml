@@ -1,0 +1,5 @@
+<view class="ai-chat">
+  <text>您好，我是人工智能助手。</text>
+  <input type="text" placeholder="请输入您的提问" bindinput="onInput"/>
+  <button bindtap="onSubmit">提交</button>
+</view>

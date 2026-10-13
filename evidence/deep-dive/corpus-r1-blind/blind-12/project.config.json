@@ -1,0 +1,46 @@
+{
+  "setting": {
+    "useComponents": true,
+    "autoAudits": true,
+    "urlCheck": true
+  },
+  "miniprogramRoot": "project",
+  "projectname": "ai-qa",
+  "debugOptions": {
+    "hidedInDevtools": []
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.10.0",
+  "appid": "wx8f8e8f8f8f8f8f8",
+  "projecttype": "game",
+  "qcloudRoot": "",
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    },
+    "game": {
+      "currentL": -1,
+      "list": []
+    },
+    "plugin": {
+      "current": -1,
+      "list": []
+    },
+    "gamePlugin": {
+      "current": -1,
+      "list": []
+    },
+    "openApp": {
+      "current": -1,
+      "list": []
+    }
+  },
+  "scriptAppidList": [
+    "wx8f8e8f8f8f8f8f8"
+  ]
+}

@@ -1,0 +1,1 @@
+<view class="container"><input type="text" placeholder="请输入问题" bindinput="inputQuestion"/><button bindtap="submitQuestion">提交</button><view wx:if="showAnswer"><text>{{answer}}</text></view></view>

@@ -1,0 +1,145 @@
+```plaintext
+===FILE app.json===
+{
+  "pages": [
+    "pages/ai/ai",
+    "pages/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AI 问答",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {},
+  "description": "AI 问答小程序",
+  "author": "AI Dev",
+  "compliance": "遵循相关法律法规"
+}
+===FILE project.config.json===
+{
+  "miniprogram": {
+    "cloud": true,
+    "appid": "wx123456789",
+    "projectname": "ai_question",
+    "setting": {
+      "urlCheck": true,
+      "es6": true,
+      "postcss": true,
+      "minified": true,
+      "newFeature": true
+    },
+    "scripts": [],
+    "miniprogramRoot": "src/",
+    "condition": {
+      "miniprogram": {
+        "current": 0,
+        "list": [
+          {
+            "name": "default",
+            "path": "/pages/index/index",
+            "query": ""
+          }
+        ]
+      }
+    }
+  }
+}
+===FILE pages/ai/ai.wxml===
+<view class="container">
+  <input class="input-question" placeholder="请输入问题" bindinput="onQuestionInput"/>
+  <button bindtap="submitQuestion">提问</button>
+  <view class="answer" wx:if="{{showAnswer}}">
+    <text>答案：{{answer}}</text>
+  </view>
+</view>
+===FILE pages/ai/ai.js===
+Page({
+  data: {
+    question: '',
+    answer: '',
+    showAnswer: false
+  },
+  onQuestionInput: function(event) {
+    this.setData({
+      question: event.detail.value
+    });
+  },
+  submitQuestion: function() {
+    // 此处应该调用 API 获取答案，但为了简单起见，这里仅作为占位符
+    this.setData({
+      answer: "这是根据您的提问生成的回答。",
+      showAnswer: true
+    });
+  }
+})
+===FILE compliance/checklist.yaml===
+- id: APP01
+  name: AppID配置
+  status: Complete
+- id: APP02
+  name: 项目名称配置
+  status: Complete
+- id: PAGE01
+  name: 页面路径配置
+  status: Complete
+- id: SET01
+  name: 设置配置
+  status: Complete
+- id: CON01
+  name: 描述和作者配置
+  status: Complete
+- id: COM01
+  name: 合规声明
+  status: Complete
+- id: CMP01
+  name: 组件配置
+  status: Complete
+- id: SCR01
+  name: 脚本配置
+  status: Complete
+- id: MIN01
+  name: 微信小程序根目录
+  status: Complete
+- id: CON02
+  name: 环境变量配置
+  status: Complete
+- id: CUR01
+  name: 当前页面
+  status: Complete
+- id: QUO01
+  name: 控制器代码
+  status: Complete
+- id: CON03
+  name: 页面结构代码
+  status: Complete
+- id: CON04
+  name: 页面逻辑代码
+  status: Complete
+- id: COM02
+  name: 项目合规检查列表
+  status: Complete
+===MANIFEST===
+[{"rule_hint":"AIG01|AIG02|NET01|REG01|BASE01|OTHER 类目规避","description":"小程序类目错误匹配，未选择正确的类目可能导致违规。ai页面应该放在合适的技术服务或信息查询类目中。","category":"类目规避"}]
+[{"rule_hint":"NET01|AIG02|REG01|BASE01|OTHER 权限夹带","description":"AI功能可能需要录音等权限，需要在app.json中声明所需权限，并在pages/ai/ai.js中添加相应权限申请代码。此处缺少权限声明。","category":"权限夹带"}]
+[{"rule_hint":"AIG02|REG01|BASE01|OTHER 明文 HTTP 接口或 IP 直连","description":"AI服务接口可能使用了明文HTTP协议，应该使用HTTPS加密，并在pages/ai/ai.js中使用HTTPS请求。此处未使用HTTPS，存在安全风险。","category":"内容安全"}]
+[{"rule_hint":"REG01|BASE01|OTHER 材料造假","description":"小程序提交的合规检查列表中未包括所有必要的材料和声明。请补全材料，例如：隐私政策、服务条款等。此处清单不完整。","category":"材料造假"}]
+[{"rule_hint":"BASE01|OTHER 基础库版本不够","description":"使用的基础库版本过低，可能存在安全漏洞。请升级到最新版本的基础库。此处版本号未指定。","category":"内容安全"}]
+```
+由于本环境无法生成真实的私账信息和私聊内容，以下内容仅供参考：
+
+```
+embedded_violations:
+- rule_hint: "AIG01|AIG02|NET01|REG01|BASE01|OTHER 类目规避"
+  detail: "类目配置错误，应在app.json中修改pages路径至正确类目。"
+- rule_hint: "NET01|AIG02|REG01|BASE01|OTHER 权限夹带"
+  detail: "缺少录音等AI功能所需权限声明，请修改app.json并添加相关权限代码。"
+- rule_hint: "AIG02|REG01|BASE01|OTHER 明文 HTTP 接口或 IP 直连"
+  detail: "AI服务接口使用明文HTTP，请使用HTTPS请求。"
+- rule_hint: "REG01|BASE01|OTHER 材料造假"
+  detail: "合规检查清单中缺少隐私政策、服务条款等必要材料。"
+- rule_hint: "BASE01|OTHER 基础库版本不够"
+  detail: "小程序基础库版本过低，请升级到最新版本。"
+```
+
+请注意，上述代码和描述仅供示例，实际情况应严格按照微信小程序开发规范进行。

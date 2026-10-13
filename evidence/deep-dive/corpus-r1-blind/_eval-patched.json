@@ -1,0 +1,887 @@
+{
+  "summary": {
+    "corpus": "corpus-r1-blind",
+    "samples": 12,
+    "adversarial": 11,
+    "escapedSamples": 0,
+    "fullyEscapedSamples": 0,
+    "perRule": {
+      "AIG01": {
+        "embedded": 11,
+        "caught": 10
+      },
+      "AIG02": {
+        "embedded": 7,
+        "caught": 0
+      },
+      "NET01": {
+        "embedded": 13,
+        "caught": 10
+      },
+      "REG01": {
+        "embedded": 13,
+        "caught": 13
+      },
+      "BASE01": {
+        "embedded": 12,
+        "caught": 0
+      }
+    },
+    "otherCategories": {
+      "隐私权限夹带": 1,
+      "材料造假": 1
+    }
+  },
+  "rows": [
+    {
+      "id": "blind-01",
+      "embedded": 1,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER Category Avoidance",
+          "description": "Category Avoidance is implemented by misrepresenting the business scope. This is done by including a 'compliance' section in app.json that does not accurately reflect the actual content of the app. This is a common way to bypass category restrictions without explicitly mentioning the restricted content. It is a violation because it misleads users and the review process. It is hidden in the app.json file in the 'description' field, which is intended for providing a brief overview of the app's functionality, not for hiding information about the actual content. This is a category violation that could lead to the app being rejected or removed from the store if discovered.",
+          "category": "Category Avoidance"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "Category Avoidance"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "Category Avoidance"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "Category Avoidance"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "Category Avoidance"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "Category Avoidance"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "REG01"
+      ],
+      "blockers": 8,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "结构判定：页面 pages/ai/ai 呈现 AI 生成内容（AI API/业务文案信号）但界面未见「内容由 AI 生成」显著提示——启发式判定，误报请人工复核"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：AI Content Non-Declaration（id=blind-01, status=pending）"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：Content Repurposing Without Attribution（id=blind-02, status=pending）"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：Use of Unencrypted HTTP Interface（id=blind-03, status=pending）"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：Incomplete Review Materials（id=blind-04, status=pending）"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：Inadequate Basic Library Version（id=blind-05, status=pending）"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：Permission Bypassing（id=blind-06, status=pending）"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：Category Avoidance（id=blind-07, status=pending）"
+        }
+      ],
+      "blockerHints": 4,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "blind-02",
+      "embedded": 1,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|NET01|REG01|BASE01|OTHER",
+          "description": "AI问答内容未经正确标识，使用了未经认证的API，未明确说明内容来源，隐藏接口为明文http，未遵守最小权限原则添加了无关权限，使用基础库版本2.8.2未更新到最新版本，以及故意规避了相关业务类目要求。",
+          "category": "类目规避/内容安全/材料造假"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "类目规避/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "类目规避/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "类目规避/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "类目规避/内容安全/材料造假"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "NET01",
+        "REG01"
+      ],
+      "blockers": 8,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "结构判定：页面 pages/ai/ai 呈现 AI 生成内容（AI API/业务文案信号）但界面未见「内容由 AI 生成」显著提示——启发式判定，误报请人工复核"
+        },
+        {
+          "ruleId": "NET01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.js",
+          "detail": "发现明文/直连地址：http://api.ai.example.com/answer——request 合法域名必须 HTTPS + 备案"
+        },
+        {
+          "ruleId": "NET01",
+          "severity": "blocker",
+          "file": "project.config.json",
+          "detail": "setting.urlCheck=false（开发者工具关闭了合法域名校验）——提审前必须恢复 true，否则域名不合规将被拒审"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：AI内容生成未标识（id=AIG01, status=不合规）"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：HTTP接口直连（id=NET01, status=不合规）"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：权限夹带（id=REG01, status=不合规）"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：基础库版本不足（id=BASE01, status=不合规）"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：类目规避（id=OTHER, status=不合规）"
+        }
+      ],
+      "blockerHints": 3,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "blind-03",
+      "embedded": 1,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|REG01|NET01|BASE01|OTHER",
+          "description": "这处埋的违规包括AI生成内容未标识（AI问答未显示来源），使用明文HTTP接口（app.js中url不加密），基础库版本不够（project.config.json中libVersion未指定），类目规避（未明确声明问答类目），以及隐私权限夹带（未经用户同意访问网络）。",
+          "category": "内容安全/材料造假/网络连接/基础库/隐私权限夹带"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "内容安全/材料造假/网络连接/基础库/隐私权限夹带"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "内容安全/材料造假/网络连接/基础库/隐私权限夹带"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "内容安全/材料造假/网络连接/基础库/隐私权限夹带"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "内容安全/材料造假/网络连接/基础库/隐私权限夹带"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "NET01",
+        "REG01"
+      ],
+      "blockers": 4,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "结构判定：页面 pages/ai/ai 呈现 AI 生成内容（AI API/业务文案信号）但界面未见「内容由 AI 生成」显著提示——启发式判定，误报请人工复核"
+        },
+        {
+          "ruleId": "NET01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.js",
+          "detail": "发现明文/直连地址：http://example.com/api/answer——request 合法域名必须 HTTPS + 备案"
+        },
+        {
+          "ruleId": "NET01",
+          "severity": "blocker",
+          "file": "project.config.json",
+          "detail": "setting.urlCheck=false（开发者工具关闭了合法域名校验）——提审前必须恢复 true，否则域名不合规将被拒审"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "缺少提审材料清单文件（深度合成类目材料无人跟踪）"
+        }
+      ],
+      "blockerHints": 3,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "blind-04",
+      "embedded": 2,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|REG01|NET01",
+          "description": "在ai.js文件中使用了明文HTTP接口，这是微信审核中明确的违规行为，可能导致小程序被拒审或下架。",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "OTHER",
+          "description": "虽然app.json中设置了urlCheck为true，但是pages/ai/ai.js中明文使用http接口，这会导致即使urlCheck生效，由于内容的不合规，小程序依然可能被拒审。",
+          "category": "隐私权限夹带"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "OTHER",
+          "category": "隐私权限夹带"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "NET01",
+        "REG01"
+      ],
+      "blockers": 3,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "结构判定：页面 pages/ai/ai 呈现 AI 生成内容（AI API/业务文案信号）但界面未见「内容由 AI 生成」显著提示——启发式判定，误报请人工复核"
+        },
+        {
+          "ruleId": "NET01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.js",
+          "detail": "发现明文/直连地址：http://example.com/api——request 合法域名必须 HTTPS + 备案"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "缺少提审材料清单文件（深度合成类目材料无人跟踪）"
+        }
+      ],
+      "blockerHints": 3,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "blind-05",
+      "embedded": 1,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|NET01|REG01|BASE01|OTHER",
+          "description": "AI 生成内容未标识，使用明文 HTTP 接口，项目配置中禁用了 URL 检查，基础库版本不够，未准备提审材料，类目规避（AI问答业务可能被归类到其他类别）。藏在 pages/ai/ai.js 的 wx.request 调用处，AI 生成内容未标识，使用 http 而不是 https，项目配置禁用了 URL 检查，基础库版本可能低于要求，未准备合规材料，可能通过其他非AI类别进行提审。",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "NET01",
+        "REG01"
+      ],
+      "blockers": 4,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "结构判定：页面 pages/ai/ai 呈现 AI 生成内容（AI API/业务文案信号）但界面未见「内容由 AI 生成」显著提示——启发式判定，误报请人工复核"
+        },
+        {
+          "ruleId": "NET01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.js",
+          "detail": "发现明文/直连地址：http://example.com/ai——request 合法域名必须 HTTPS + 备案"
+        },
+        {
+          "ruleId": "NET01",
+          "severity": "blocker",
+          "file": "project.config.json",
+          "detail": "setting.urlCheck=false（开发者工具关闭了合法域名校验）——提审前必须恢复 true，否则域名不合规将被拒审"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "缺少提审材料清单文件（深度合成类目材料无人跟踪）"
+        }
+      ],
+      "blockerHints": 3,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "blind-06",
+      "embedded": 1,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER",
+          "description": "AI生成内容未标识、使用明文HTTP接口、未准备提审材料、基础库版本过低、权限夹带、类目规避。AI问答内容未标识为AI生成，使用明文HTTP接口直接连接外部API，未准备提审材料，项目设置中基础库版本过低，可能涉及权限夹带和类目规避问题。",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "NET01",
+        "REG01"
+      ],
+      "blockers": 4,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "结构判定：页面 pages/ai/ai 呈现 AI 生成内容（AI API/业务文案信号）但界面未见「内容由 AI 生成」显著提示——启发式判定，误报请人工复核"
+        },
+        {
+          "ruleId": "NET01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.js",
+          "detail": "发现明文/直连地址：http://example.com/api/answer——request 合法域名必须 HTTPS + 备案"
+        },
+        {
+          "ruleId": "NET01",
+          "severity": "blocker",
+          "file": "project.config.json",
+          "detail": "setting.urlCheck=false（开发者工具关闭了合法域名校验）——提审前必须恢复 true，否则域名不合规将被拒审"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "缺少提审材料清单文件（深度合成类目材料无人跟踪）"
+        }
+      ],
+      "blockerHints": 4,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "blind-07",
+      "embedded": 5,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01",
+          "description": "在 pages/ai/ai.js 文件的第 12 行，请求了未标记AI生成内容的接口。这可能会导致微信审核时判定为违规。真实情况中，如果没有正确标识AI生成内容，可能会被要求下架。",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "REG01|BASE01",
+          "description": "在 pages/ai/ai.js 文件的第 16 行，使用了明文http接口进行网络请求，这违反了微信小程序的安全规范。应该使用https加密传输。如果没有修复这个问题，小程序可能会被下架。",
+          "category": "网络安全"
+        },
+        {
+          "rule_hint": "BASE01",
+          "description": "在 project.config.json 文件的 setting 部分中，编译类型被设置为 'miniprogram'，但没有指定版本号，这可能会因为使用了旧版基础库而遇到兼容性问题。应该指定正确的版本号，否则可能会导致功能无法正常使用。",
+          "category": "基础库版本问题"
+        },
+        {
+          "rule_hint": "NET01",
+          "description": "在 app.json 文件中，没有设置页面相关的配置项，如navigationBarBackgroundColor、navigationBarTitleText等。虽然这不是直接的违规，但缺乏页面配置可能会影响用户体验，并可能导致小程序被下架。",
+          "category": "页面配置问题"
+        },
+        {
+          "rule_hint": "OTHER",
+          "description": "在 pages/ai/ai.wxml 文件中，简单地声明了这是AI问答小程序，但缺乏具体的业务描述或合规声明。在真实情况下，如果微信审核方注意到这一点，可能会要求提供更详细的业务说明和合规证明。",
+          "category": "材料造假"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "网络安全"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "网络安全"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "基础库版本问题"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "页面配置问题"
+        },
+        {
+          "rule_hint": "OTHER",
+          "category": "材料造假"
+        }
+      ],
+      "firedRules": [
+        "NET01",
+        "REG01"
+      ],
+      "blockers": 2,
+      "findings": [
+        {
+          "ruleId": "NET01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.js",
+          "detail": "发现明文/直连地址：http://example.com/api/answer——request 合法域名必须 HTTPS + 备案"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "缺少提审材料清单文件（深度合成类目材料无人跟踪）"
+        }
+      ],
+      "blockerHints": 6,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "blind-08",
+      "embedded": 1,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER",
+          "description": "AI生成内容不标识、AI生成内容未充分标识、明文HTTP接口、IP直连访问、提审材料不完善、基础库版本不合规、其他违规，违规代码位于 pages/ai/ai.js 的 wx.request() 方法附近，这里未对AI生成的答案进行任何合规性标识，使用了HTTP而非HTTPS，并且接口URL可能未经官方审查。",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避/诱导分享"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避/诱导分享"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避/诱导分享"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避/诱导分享"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避/诱导分享"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避/诱导分享"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "NET01",
+        "REG01"
+      ],
+      "blockers": 4,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "结构判定：页面 pages/ai/ai 呈现 AI 生成内容（AI API/业务文案信号）但界面未见「内容由 AI 生成」显著提示——启发式判定，误报请人工复核"
+        },
+        {
+          "ruleId": "NET01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.js",
+          "detail": "发现明文/直连地址：http://example.com/ask——request 合法域名必须 HTTPS + 备案"
+        },
+        {
+          "ruleId": "NET01",
+          "severity": "blocker",
+          "file": "project.config.json",
+          "detail": "setting.urlCheck=false（开发者工具关闭了合法域名校验）——提审前必须恢复 true，否则域名不合规将被拒审"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：Project checklist（id=MTL001, status=pending）"
+        }
+      ],
+      "blockerHints": 4,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "blind-09",
+      "embedded": 1,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER",
+          "description": "AI生成内容未标识、使用明文http接口、未使用最新基础库版本、提审材料未准备、权限夹带、类目规避。在ai.js文件第5行使用明文http接口，真实世界中被微信拒审是因为这些违规可能导致隐私泄露、安全问题、功能受限、用户体验差。",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "NET01",
+        "REG01"
+      ],
+      "blockers": 4,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "结构判定：页面 pages/ai/ai 呈现 AI 生成内容（AI API/业务文案信号）但界面未见「内容由 AI 生成」显著提示——启发式判定，误报请人工复核"
+        },
+        {
+          "ruleId": "NET01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.js",
+          "detail": "发现明文/直连地址：http://example.com/api/ai——request 合法域名必须 HTTPS + 备案"
+        },
+        {
+          "ruleId": "NET01",
+          "severity": "blocker",
+          "file": "project.config.json",
+          "detail": "project.config.json 存在但 JSON 解析失败（注释/尾逗号等非法语法）——urlCheck 等域名校验配置无法机械确认，需人工核对"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "缺少提审材料清单文件（深度合成类目材料无人跟踪）"
+        }
+      ],
+      "blockerHints": 4,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "blind-10",
+      "embedded": 0,
+      "manifest": [],
+      "hints": [],
+      "firedRules": [
+        "AIG01",
+        "REG01"
+      ],
+      "blockers": 2,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "结构判定：页面 pages/ai/ai 呈现 AI 生成内容（AI API/业务文案信号）但界面未见「内容由 AI 生成」显著提示——启发式判定，误报请人工复核"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "缺少提审材料清单文件（深度合成类目材料无人跟踪）"
+        }
+      ],
+      "blockerHints": 0,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "blind-11",
+      "embedded": 1,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 类目规避",
+          "description": "在app.json中，我们加入了不必要的权限要求（'scope.userLocation'），但实际应用中并未使用到该权限，这属于类目规避的违规操作。藏在该文件的 permission 部分，真实情况下会被微信拒审。",
+          "category": "类目规避"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "类目规避"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "NET01",
+        "REG01"
+      ],
+      "blockers": 3,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "结构判定：页面 pages/ai/ai 呈现 AI 生成内容（AI API/业务文案信号）但界面未见「内容由 AI 生成」显著提示——启发式判定，误报请人工复核"
+        },
+        {
+          "ruleId": "NET01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.js",
+          "detail": "发现明文/直连地址：http://example.com/api/ask——request 合法域名必须 HTTPS + 备案"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "compliance/checklist.yaml 无法解析：YAML 语法错误 第 14 行: ```——材料齐备性无法机械确认，需人工核对"
+        }
+      ],
+      "blockerHints": 4,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "blind-12",
+      "embedded": 3,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+          "description": "AI生成内容不标识，藏在ai.js文件中，未在app.json中明确声明。",
+          "category": "内容安全/材料造假"
+        },
+        {
+          "rule_hint": "REG01",
+          "description": "类目规避，appid属于游戏类别，而小程序实际上提供的是AI问答服务，藏在app.json中。",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "NET01",
+          "description": "明文HTTP接口，藏在ai.js文件第8行，使用未加密的网络请求，真实场景会被微信拒审。",
+          "category": "网络安全/材料造假"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "内容安全/材料造假"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "内容安全/材料造假"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "内容安全/材料造假"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "内容安全/材料造假"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "内容安全/材料造假"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "网络安全/材料造假"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "REG01"
+      ],
+      "blockers": 5,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "结构判定：页面 pages/ai/ai 呈现 AI 生成内容（AI API/业务文案信号）但界面未见「内容由 AI 生成」显著提示——启发式判定，误报请人工复核"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：AI Content Disclaimer（id=MAT01, status=active）"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：Third-party API Disclaimer（id=MAT02, status=active）"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：Privacy Policy（id=MAT03, status=active）"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "材料未就绪：Terms of Service（id=MAT04, status=active）"
+        }
+      ],
+      "blockerHints": 6,
+      "escaped": false,
+      "fullyEscaped": false
+    }
+  ]
+}

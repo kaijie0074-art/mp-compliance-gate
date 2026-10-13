@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|NET01|REG01|BASE01|OTHER 之一",
+    "description": "以下违规内容为真实违规，但门禁规则可能无法检测出来。",
+    "category": "类目规避"
+  }
+]

@@ -1,0 +1,13 @@
+materials:
+  - id: MAT01
+    name: "AI Content Disclaimer"
+    status: "active"
+  - id: MAT02
+    name: "Third-party API Disclaimer"
+    status: "active"
+  - id: MAT03
+    name: "Privacy Policy"
+    status: "active"
+  - id: MAT04
+    name: "Terms of Service"
+    status: "active"

@@ -1,0 +1,19 @@
+{
+  "mode": "blind",
+  "n": 12,
+  "jsonFail": 0,
+  "samples": [
+    {
+      "id": "blind-01",
+      "violations": 1
+    },
+    {
+      "id": "blind-10",
+      "violations": 0
+    },
+    {
+      "id": "blind-12",
+      "violations": 3
+    }
+  ]
+}

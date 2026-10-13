@@ -1,0 +1,10 @@
+<view class="container">
+  <text>AI Chat Interface</text>
+  <input type="text" placeholder="Type your message here..." bindinput="onInput"/>
+  <button bindtap="onSend">Send</button>
+  <view class="chat">
+    <view class="message" wx:for="{{messages}}" wx:key="index">
+      <text>{{item.text}}</text>
+    </view>
+  </view>
+</view>

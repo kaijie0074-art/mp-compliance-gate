@@ -1,0 +1,10 @@
+{
+  "setting": {
+    "urlCheck": false
+  },
+  "miniprogram": {
+    "rootFontSize": 32
+  },
+  "description": "项目配置文件",
+  "scriptVersion": "2.10.2"
+}

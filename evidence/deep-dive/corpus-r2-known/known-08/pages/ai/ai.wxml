@@ -1,0 +1,3 @@
+<view class="container">
+  <text class="ai-result">这是AI生成的结果</text>
+</view>

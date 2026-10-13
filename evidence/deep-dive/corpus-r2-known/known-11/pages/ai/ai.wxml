@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="ai-chat">
+    <text class="ai-result">Hello, how can I help you today?</text>
+  </view>
+</view>

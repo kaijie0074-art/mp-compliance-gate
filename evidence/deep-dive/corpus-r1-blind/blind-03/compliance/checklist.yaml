@@ -1,0 +1,12 @@
+- id: 1
+  name: Materials are not prepared
+  status: pending
+- id: 2
+  name: Inadequate basic library version
+  status: pending
+- id: 3
+  name: AI-generated content not identified
+  status: pending
+- id: 4
+  name: Copying content without de-identification
+  status: pending

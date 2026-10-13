@@ -1,0 +1,22 @@
+[
+  {
+    "rule_hint": "AIG01",
+    "description": "AI 生成内容未显式标识，藏在 pages/ai/ai.wxml 文件中，因为缺少 AI 生成标识文案。",
+    "category": "内容安全"
+  },
+  {
+    "rule_hint": "AIG02",
+    "description": "复制/导出路径未保留生成标识，藏在 pages/ai/ai.js 文件中，因为缺少 wx.setClipboardData 调用的标识文案。",
+    "category": "内容安全"
+  },
+  {
+    "rule_hint": "REG01",
+    "description": "深度合成类目提审材料未齐备，藏在 compliance/checklist.yaml 文件中，因为缺少 'agreement_text' 材料的状态标记为 'ready'。",
+    "category": "材料造假"
+  },
+  {
+    "rule_hint": "NET01",
+    "description": "网络请求未使用 HTTPS 域名，藏在 app.json 文件中，因为 libVersion 设置为 '3.15.0'，而规则要求 '3.15.1' 或更高版本。",
+    "category": "隐私权限夹带"
+  }
+]

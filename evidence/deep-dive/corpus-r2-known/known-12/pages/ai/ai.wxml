@@ -1,0 +1,5 @@
+<view class="container">
+  <text>欢迎来到AI智能助手</text>
+  <button bindtap="getAIAnswer">询问AI</button>
+  <view wx:if="{{showAnswer}}" class="ai-answer">{{aiAnswer}}</view>
+</view>

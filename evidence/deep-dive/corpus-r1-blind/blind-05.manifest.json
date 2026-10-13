@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|NET01|REG01|BASE01|OTHER",
+    "description": "AI 生成内容未标识，使用明文 HTTP 接口，项目配置中禁用了 URL 检查，基础库版本不够，未准备提审材料，类目规避（AI问答业务可能被归类到其他类别）。藏在 pages/ai/ai.js 的 wx.request 调用处，AI 生成内容未标识，使用 http 而不是 https，项目配置禁用了 URL 检查，基础库版本可能低于要求，未准备合规材料，可能通过其他非AI类别进行提审。",
+    "category": "内容安全/材料造假/隐私权限夹带/类目规避"
+  }
+]

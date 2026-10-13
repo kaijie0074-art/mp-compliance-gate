@@ -1,0 +1,6 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 类目规避",
+    "description": "以下样本违规原因及文件位置：\n- AIG01: app.json 中缺少AI生成内容显式标识（交互界面）。\n- AIG02: pages/ai/ai.js 中wx.request请求缺少AI生成内容标识。\n- NET01: project.config.json 中libVersion未设置为3.15.1。\n- REG01: compliance/checklist.yaml 中缺少材料「商标使用授权书」。\n- OTHER: app.json 中pages配置路径不规范，应使用小写字母"
+  }
+]

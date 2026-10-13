@@ -11,6 +11,14 @@ import { load as loadYaml } from "./yaml-lite.mjs";
 import { RULES } from "./rules/index.mjs";
 
 export async function buildContext(root) {
+  const exists = async (rel) => {
+    try {
+      await readFile(join(root, rel), "utf8");
+      return true;
+    } catch {
+      return false;
+    }
+  };
   const readJson = async (rel) => {
     try {
       return JSON.parse(await readFile(join(root, rel), "utf8"));
@@ -32,19 +40,45 @@ export async function buildContext(root) {
   for (const f of files) {
     if (/\.(js|wxml|json|yaml|wxs)$/i.test(f)) {
       readText[f] = await readFile(f, "utf8");
+    }
   }
+
+  // project.config.json：真实微信工具同时存在「平铺」与 miniprogram 嵌套两种形态
+  // （对抗研究 Q2：知规模型把 urlCheck/libVersion 藏进嵌套层绕过检查）。
+  // 解析失败（如 JSON 内 // 注释）不能静默当 null——那是所有配置类规则的全盲区。
+  let projectConfig = null;
+  let projectConfigError = null;
+  if (await exists("project.config.json")) {
+    const raw = await readJson("project.config.json");
+    if (raw === null) {
+      projectConfigError = "project.config.json 存在但 JSON 解析失败（注释/尾逗号等非法语法）";
+    } else {
+      const nested = raw.miniprogram ?? {};
+      projectConfig = {
+        ...raw,
+        ...(nested && typeof nested === "object"
+          ? { libVersion: raw.libVersion ?? nested.libVersion, setting: { ...nested.setting, ...raw.setting } }
+          : {}),
+      };
+    }
   }
+
   let checklist = null;
-  try {
-    checklist = loadYaml(await readFile(join(root, "compliance", "checklist.yaml"), "utf8"));
-  } catch {
-    /* 无 checklist 文件由 REG01 报告 */
+  let checklistError = null;
+  if (await exists("compliance/checklist.yaml")) {
+    try {
+      checklist = loadYaml(await readFile(join(root, "compliance", "checklist.yaml"), "utf8"));
+    } catch (e) {
+      checklistError = `compliance/checklist.yaml 无法解析：${e.message}`;
+    }
   }
   return {
     root,
     appJson: await readJson("app.json"),
-    projectConfig: await readJson("project.config.json"),
+    projectConfig,
+    projectConfigError,
     checklist,
+    checklistError,
     files,
     readText,
   };

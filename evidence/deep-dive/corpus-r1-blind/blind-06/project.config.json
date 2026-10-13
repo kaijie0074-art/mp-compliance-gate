@@ -1,0 +1,1 @@
+{"miniprogramRoot":"./","cloudfunctionRoot":"./cloudfunctions/","appid":"wx1234567890abcdef","projectname":"ai问答","setting":{"urlCheck":false,"minified":true,"postcss":true,"es6":true,"babelSetting":{"presets":["env"],"plugins":[]}}}

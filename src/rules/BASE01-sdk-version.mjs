@@ -27,6 +27,9 @@ export default {
   check(ctx) {
     const usesCloudAI = ctx.files.some((f) => f.endsWith(".js") && /wx\.cloud\.extend\.AI/.test(ctx.readText[f] ?? ""));
     if (!usesCloudAI) return [];
+    if (ctx.projectConfigError) {
+      return [{ file: "project.config.json", detail: `${ctx.projectConfigError}——libVersion 门槛无法机械确认，需人工核对` }];
+    }
     const declared = ctx.projectConfig?.libVersion;
     if (!declared) {
       return [{ file: "project.config.json", detail: "使用了 wx.cloud.extend.AI 但未声明 libVersion（需 ≥ 3.15.1）" }];

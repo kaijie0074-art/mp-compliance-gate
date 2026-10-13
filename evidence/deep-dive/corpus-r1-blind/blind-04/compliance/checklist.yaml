@@ -1,0 +1,12 @@
+- id: 1
+  name: Materials Prepared
+  status: YES
+- id: 2
+  name: Content Safety
+  status: YES
+- id: 3
+  name: Privacy Policy
+  status: YES
+- id: 4
+  name: Minimum Library Version
+  status: YES

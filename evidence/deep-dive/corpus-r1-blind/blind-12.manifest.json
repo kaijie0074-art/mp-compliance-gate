@@ -1,0 +1,17 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+    "description": "AI生成内容不标识，藏在ai.js文件中，未在app.json中明确声明。",
+    "category": "内容安全/材料造假"
+  },
+  {
+    "rule_hint": "REG01",
+    "description": "类目规避，appid属于游戏类别，而小程序实际上提供的是AI问答服务，藏在app.json中。",
+    "category": "类目规避"
+  },
+  {
+    "rule_hint": "NET01",
+    "description": "明文HTTP接口，藏在ai.js文件第8行，使用未加密的网络请求，真实场景会被微信拒审。",
+    "category": "网络安全/材料造假"
+  }
+]

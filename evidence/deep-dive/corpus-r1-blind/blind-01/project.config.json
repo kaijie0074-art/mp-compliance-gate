@@ -1,0 +1,15 @@
+{
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "miniprogramRoot": "src/",
+  "projectname": "ai-qa",
+  "appid": "wx1234567890abcdef",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "compileType": "miniprogram",
+  "libVersion": "2.14.0"
+}

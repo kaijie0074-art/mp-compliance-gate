@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER",
+    "description": "AI生成内容不标识、AI生成内容未充分标识、明文HTTP接口、IP直连访问、提审材料不完善、基础库版本不合规、其他违规，违规代码位于 pages/ai/ai.js 的 wx.request() 方法附近，这里未对AI生成的答案进行任何合规性标识，使用了HTTP而非HTTPS，并且接口URL可能未经官方审查。",
+    "category": "内容安全/材料造假/隐私权限夹带/类目规避/诱导分享"
+  }
+]
