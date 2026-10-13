@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/ai/ai"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AI问答",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {},
+  "libVersion": "3.15.1"
+}

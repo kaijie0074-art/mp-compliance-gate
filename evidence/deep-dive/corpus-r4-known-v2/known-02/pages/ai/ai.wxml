@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="ai-chat">
+    <input class="input-field" placeholder="请输入问题" bindinput="onInput"/>
+    <button bindtap="onSubmit">发送</button>
+  </view>
+  <view class="ai-result">
+    <text class="result-text">{{aiResult}}</text>
+  </view>
+</view>

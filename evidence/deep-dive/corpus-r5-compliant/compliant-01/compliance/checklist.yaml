@@ -1,0 +1,13 @@
+materials:
+  - id: compliant-01
+    name: AI Content Labeling
+    status: compliant
+  - id: compliant-02
+    name: HTTPS URL
+    status: compliant
+  - id: compliant-03
+    name: Complete Review Materials
+    status: compliant
+  - id: compliant-04
+    name: LibVersion Check
+    status: compliant

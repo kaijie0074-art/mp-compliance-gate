@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+    "description": "以下违规均为故意埋设，用于评估门禁系统的检测能力。1. app.json pages 路径存在误写，可能导致结构判定错误。2. pages/ai/ai.js 中存在明文 HTTP 请求，违反 NET01 规则。3. pages/ai/ai.js 中未使用 AI 标识变量，违反 AIG02 规则。4. compliance/checklist.yaml 中缺少协议文本材料的 status，违反 REG01 规则。",
+    "category": "内容安全"
+  }
+]

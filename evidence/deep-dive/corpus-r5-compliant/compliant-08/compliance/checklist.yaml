@@ -1,0 +1,16 @@
+materials:
+- id: 1
+  name: AI_Indicator
+  status: passed
+- id: 2
+  name: HTTPS_Config
+  status: passed
+- id: 3
+  name: Copy_Path_Indicator
+  status: passed
+- id: 4
+  name: Review_Materials
+  status: passed
+- id: 5
+  name: LibVersion
+  status: passed

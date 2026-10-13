@@ -1,0 +1,13 @@
+materials:
+- id: 1
+  name: "Content AI Indication"
+  status: "Checked"
+- id: 2
+  name: "HTTPS Compliance"
+  status: "Checked"
+- id: 3
+  name: "App Info Prepared"
+  status: "Checked"
+- id: 4
+  name: "LibVersion Min"
+  status: "Checked"

@@ -1,0 +1,7 @@
+<view class="ai-chat">
+  <input placeholder="Type your message here" bindinput="onInput" />
+  <button bindtap="send">Send</button>
+</view>
+<view class="ai-answer">
+  <text>{{ answer }}</text>
+</view>

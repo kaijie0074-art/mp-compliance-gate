@@ -1,0 +1,143 @@
+```yaml
+# compliance/checklist.yaml
+materials:
+  - id:营业执照
+    name:营业执照
+    status: ready
+  - id:技术方备案文件
+    name:技术方备案文件
+    status: ready
+  - id:标识样式截图
+    name:标识样式截图
+    status: ready
+  - id:协议文本
+    name:协议文本
+    status: ready
+```
+
+```json
+// app.json
+{
+  "pages": [
+    "pages/ai/ai",
+    "pages/ai/ai"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AI Tool",
+    "navigationBarTextStyle": "black"
+  }
+}
+```
+
+```json
+// project.config.json
+{
+  "miniprogram": {
+    "cloud": true,
+    "libVersion": "3.15.0"
+  },
+  "setting": {
+    "urlCheck": true
+  },
+  "appid": "wx1234567890abcdef",
+  "projectname": "ai-tool",
+  "description": "A mini program for AI powered tasks",
+  "setting": {
+    "urlCheck": false
+  },
+  "scriptAppIdList": [
+    "wx1234567890abcdef"
+  ]
+}
+```
+
+```xml
+<!-- pages/ai/ai.wxml -->
+<view class="container">
+  <text>AI powered chatbot</text>
+  <input type="text" placeholder="Ask me anything..." bindinput="onInput"/>
+  <button bindtap="onSubmit">Send</button>
+  <text>{{ reply }}</text>
+</view>
+```
+
+```javascript
+// pages/ai/ai.js
+Page({
+  data: {
+    inputText: '',
+    reply: ''
+  },
+  onInput: function(event) {
+    this.setData({
+      inputText: event.detail.value
+    });
+  },
+  onSubmit: function() {
+    wx.cloud.callFunction({
+      name: 'aiChat',
+      data: {
+        text: this.data.inputText
+      },
+      success: res => {
+        this.setData({
+          reply: res.result.text
+        });
+      },
+      fail: err => {
+        console.error('Call AI function failed', err);
+      }
+    });
+  }
+});
+```
+
+```json
+// MANIFEST
+[
+  {
+    "rule_hint": "AIG01",
+    "description": "AI content is not explicitly labeled in the interaction interface. This is a blocker because it violates the AI content labeling requirements, which are critical for user awareness.",
+    "category": "内容安全"
+  },
+  {
+    "rule_hint": "AIG02",
+    "description": "The AI-generated label is not included in the data of wx.setClipboardData, which violates the requirement to retain the label when copying or exporting content.",
+    "category": "内容安全"
+  },
+  {
+    "rule_hint": "REG01",
+    "description": "The compliance checklist is missing required materials for the deep synthesis category, which is necessary for review approval.",
+    "category": "材料造假"
+  },
+  {
+    "rule_hint": "BASE01",
+    "description": "The miniprogram uses an older version of the AI library, which is below the required threshold. This may lead to functionality issues and violates the library version requirements.",
+    "category": "基础库版本"
+  }
+]
+```
+
+```json
+// embedded_violations
+[
+  {
+    "violation": "AIG01",
+    "evasion_reason": "The AI-generated content is not labeled in the interaction interface, but the static scanner does not have a mechanism to detect generic class names used for AI components."
+  },
+  {
+    "violation": "AIG02",
+    "evasion_reason": "The AI-generated label is not included in the data of wx.setClipboardData because the scanner only checks the data expression itself and does not consider the context of the success callback."
+  },
+  {
+    "violation": "REG01",
+    "evasion_reason": "The compliance checklist is missing required materials, but the scanner only checks the status of each material and does not verify the actual content."
+  },
+  {
+    "violation": "BASE01",
+    "evasion_reason": "The scanner only checks the declared libVersion in project.config.json and does not perform any runtime checks or consider the actual usage of wx.cloud.extend.AI."
+  }
+]
+```

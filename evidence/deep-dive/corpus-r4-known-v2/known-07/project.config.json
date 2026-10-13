@@ -1,0 +1,9 @@
+{
+  "miniprogram": {
+    "cloud": true,
+    "libVersion": "3.15.0"
+  },
+  "setting": {
+    "urlCheck": true
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "appid": "wx1234567890abcdef",
+  "projectname": "compliant-07-ai-qa",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+  "description": "A compliant AI-powered Q&A WeChat Mini Program",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": false
+  },
+  "scriptVersion": "0",
+  "miniprogramRoot": "miniprogram",
+  "compileType": "miniprogram",
+  "libVersion": "3.15.1"
+}

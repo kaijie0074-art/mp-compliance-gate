@@ -1,0 +1,11 @@
+{
+  "miniprogram": {
+    "setting": {
+      "urlCheck": true
+    },
+    "libVersion": "3.15.0"
+  },
+  "appid": "wx1234567890abcdef",
+  "projectname": "ai-chat-app",
+  "debug": true
+}

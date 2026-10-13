@@ -1,0 +1,23 @@
+{
+  "miniprogramRoot": ".",
+  "cloudFunctionRoot": "cloudfunctions",
+  "appid": "wxb5xxxxxx",
+  "projectname": "compliant-04-ai",
+  "setting": {
+    "useIsolateContext": true,
+    "compileHotReLoad": false,
+    "postcss": true,
+    "useScopeDataCheck": false,
+    "checkDevTools": true,
+    "es6Enable": true,
+    "newFeature": true
+  },
+  "scriptVersion": "1.7",
+  "devDepends": {},
+  "packaging": {
+    "packageDependencies": [
+      "package.json"
+    ]
+  },
+  "libVersion": "3.15.1"
+}

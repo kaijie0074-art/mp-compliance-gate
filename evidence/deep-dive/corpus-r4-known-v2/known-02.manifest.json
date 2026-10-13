@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|REG01|BASE01|OTHER 之一",
+    "description": "以下违规将绕过检测逻辑，藏在特定文件与行附近。AIG01: 未显式标识AI生成内容；AIG02: 未在复制/导出时保留AI生成标识；REG01: checklist.yaml中材料未全部就绪；BASE01: project.config.json中libVersion低于3.15.1；OTHER: 代码中包含敏感信息泄露。",
+    "category": "类目规避"
+  }
+]

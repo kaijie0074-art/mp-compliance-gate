@@ -1,0 +1,17 @@
+{
+  "miniprogramRoot": "./",
+  "cloudFunctionRoot": "./cloudfunctions",
+  "projectname": "ai-questions",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true,
+    "nodejs": "8.1"
+  },
+  "scripts": [],
+  "miniprogram": {
+    "libVersion": "3.15.1"
+  }
+}

@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+    "description": "以下违规将展示如何在合规门禁规则中留下漏洞。",
+    "category": "内容安全"
+  }
+]

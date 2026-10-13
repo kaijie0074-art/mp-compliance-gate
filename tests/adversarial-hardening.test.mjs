@@ -147,3 +147,22 @@ test("AIG02：标识文案变体（人工智能生成内容 / AI generated conte
     await rm(root, { recursive: true });
   }
 });
+
+test("REG01：就绪状态同义词（Checked/Completed/passed/compliant/已就绪）不误报（corpus-r5 手法）", async () => {
+  const root = await scaffold({
+    "compliance/checklist.yaml": `materials:
+  - id: a
+    name: 营业执照
+    status: Checked
+  - id: b
+    name: 备案文件
+    status: compliant
+  - id: c
+    name: 截图
+    status: 已就绪
+`,
+  });
+  const { findings } = await runGate(root);
+  assert.ok(!ids(findings).includes("REG01"), JSON.stringify(findings));
+  await rm(root, { recursive: true });
+});

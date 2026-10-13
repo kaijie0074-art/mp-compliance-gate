@@ -1,0 +1,9 @@
+<view class="container">
+  <input class="input" type="text" placeholder="请输入你的问题" bindinput="onInput"/>
+  <button class="button" bindtap="onSend">发送</button>
+  <view class="ai-chat">
+    <view class="ai-message" wx:for="{{messages}}" wx:key="index">
+      <text>{{item.user === 'user' ? item.text : 'AI: ' + item.text}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,110 @@
+```yaml
+# ===FILE app.json===
+{
+  "pages": [
+    "pages/ai/ai"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AI交互",
+    "navigationBarTextStyle": "black"
+  }
+}
+# ===FILE project.config.json===
+{
+  "setting": {
+    "urlCheck": false
+  },
+  "miniprogram": {
+    "cloudBase": {
+      "env": "test-env"
+    }
+  }
+}
+# ===FILE pages/ai/ai.wxml===
+<view class="container">
+  <view class="ai-input">
+    <input type="text" placeholder="请输入问题" bindinput="inputHandler" />
+    <button bindtap="sendQuestion">发送</button>
+  </view>
+  <view class="ai-response">
+    <text>{{ response }}</text>
+  </view>
+</view>
+# ===FILE pages/ai/ai.js===
+Page({
+  data: {
+    question: '',
+    response: ''
+  },
+  inputHandler: function(e) {
+    this.setData({
+      question: e.detail.value
+    });
+  },
+  sendQuestion: function() {
+    const question = this.data.question;
+    if (question) {
+      // 模拟请求AI模型处理问题
+      this.setData({
+        response: "正在思考..."
+      });
+      setTimeout(() => {
+        this.setData({
+          response: "这是AI的回答：你的问题是什么？"
+        });
+      }, 2000);
+    }
+  }
+})
+# ===FILE compliance/checklist.yaml===
+materials:
+- id: "business_license"
+  name: "营业执照"
+  status: "ready"
+- id: "algorithm_certificate"
+  name: "算法备案文件"
+  status: "ready"
+- id: "ui_screen_shot"
+  name: "标识样式截图"
+  status: "ready"
+- id: "protocol_text"
+  name: "协议文本"
+  status: "ready"
+```
+
+===MANIFEST===
+[
+  {
+    "rule_hint": "AIG01|REG01",
+    "description": "在ai.wxml中缺少AI生成内容标识，并且compliance/checklist.yaml中的材料不完整。",
+    "category": "内容安全"
+  },
+  {
+    "rule_hint": "NET01",
+    "description": "在project.config.json中关闭了urlCheck，违反了合法域名校验规则。",
+    "category": "基础安全"
+  }
+]
+
+ embedded_violations:
+- {
+  "violation_id": "AIG01",
+  "file": "pages/ai/ai.wxml",
+  "line": "1",
+  "evasion_reason": "缺少显式标识AI生成内容"
+}
+- {
+  "violation_id": "REG01",
+  "file": "compliance/checklist.yaml",
+  "line": "5",
+  "evasion_reason": "缺少材料：algorithm_certificate"
+}
+- {
+  "violation_id": "NET01",
+  "file": "project.config.json",
+  "line": "4",
+  "evasion_reason": "开发者工具中关闭了合法域名校验"
+}
+```

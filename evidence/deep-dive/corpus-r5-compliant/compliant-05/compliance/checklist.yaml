@@ -1,0 +1,16 @@
+materials:
+- id: AIContentIndication
+  name: AI Content Indication
+  status: completed
+- id: CopyPathAppendIndication
+  name: Copy Path Append Indication
+  status: completed
+- id: HTTPSProtocol
+  name: HTTPS Protocol
+  status: completed
+- id: ReadyReviewMaterials
+  name: Ready Review Materials
+  status: completed
+- id: LibVersion
+  name: Lib Version
+  status: completed

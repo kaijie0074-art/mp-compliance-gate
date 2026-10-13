@@ -1,0 +1,27 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+    "description": "AI问答内容标识未在显眼位置显示，可能被微信拒审",
+    "category": "内容安全"
+  },
+  {
+    "rule_hint": "REG01",
+    "description": "小程序appid配置错误，可能被微信拒审",
+    "category": "注册信息错误"
+  },
+  {
+    "rule_hint": "NET01",
+    "description": "网络请求未使用https，可能被微信拒审",
+    "category": "网络安全"
+  },
+  {
+    "rule_hint": "BASE01",
+    "description": "libVersion低于3.15.1，可能被微信拒审",
+    "category": "基础功能错误"
+  },
+  {
+    "rule_hint": "OTHER",
+    "description": "小程序包含敏感词或违规内容，可能被微信拒审",
+    "category": "内容安全"
+  }
+]

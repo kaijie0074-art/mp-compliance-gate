@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="ai-content">内容由AI生成</view>
+  <input type="text" placeholder="请输入问题" bindinput="onInput" />
+  <button bindtap="submitQuestion">提问</button>
+  <view class="answer" wx:if="{{showAnswer}}">{{answer}}</view>
+</view>

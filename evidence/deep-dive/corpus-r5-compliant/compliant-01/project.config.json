@@ -1,0 +1,26 @@
+{
+  "miniprogram": {
+    "cloudfunctionTemplateRoot": "cloudfunctions/",
+    "setting": {
+      "urlCheck": true,
+      "es6": true,
+      "postcss": true,
+      "minified": true,
+      "newFeature": true
+    },
+    "condition": {
+      "miniprogram": {
+        "current": 0,
+        "list": [
+          {
+            "name": "default",
+            "pathName": "pages/ai/ai",
+            "query": "",
+            "scene": null
+          }
+        ]
+      }
+    }
+  },
+  "libVersion": "3.15.1"
+}

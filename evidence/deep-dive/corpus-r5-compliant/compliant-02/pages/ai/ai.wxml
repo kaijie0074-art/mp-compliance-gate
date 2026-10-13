@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="ai-indicator">内容由AI生成</view>
+  <input type="text" placeholder="请输入问题" bindinput="onInput" />
+  <button bindtap="onAsk">问AI</button>
+  <view class="ai-response">{{aiResponse}}</view>
+</view>

@@ -1,0 +1,14 @@
+{
+  "miniprogram": {
+    "cloudfunction": true,
+    "appid": "wx1234567890abcdef",
+    "setting": {
+      "urlCheck": true,
+      "es6": true,
+      "postcss": true,
+      "minified": true,
+      "newFeature": true
+    },
+    "libVersion": "3.15.1"
+  }
+}

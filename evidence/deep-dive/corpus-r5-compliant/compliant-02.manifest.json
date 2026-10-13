@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+    "description": "AI问答功能合规性检查，包括AI生成内容标识、复制路径标识、使用https协议、提审材料齐全、libVersion符合要求。藏在pages/ai/ai.wxml、pages/ai/ai.js文件中，确保内容安全，无诱导分享行为。",
+    "category": "内容安全"
+  }
+]

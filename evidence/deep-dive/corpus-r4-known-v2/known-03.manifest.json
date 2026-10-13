@@ -1,0 +1,22 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+    "description": "本样本故意绕过AIG01的检测逻辑，未在AI交互界面显示AI生成内容标识。AIG02检测逻辑通过在data变量中嵌入AI生成标识绕过。NET01检测逻辑通过使用本地IP绕过。REG01检测逻辑通过故意遗漏营业执照材料状态为ready绕过。BASE01检测逻辑通过使用低于门槛的库版本绕过。",
+    "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+  },
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+    "description": "本样本故意绕过AIG01的检测逻辑，未在AI交互界面显示AI生成内容标识。AIG02检测逻辑通过在data变量中嵌入AI生成标识绕过。NET01检测逻辑通过使用本地IP绕过。REG01检测逻辑通过故意遗漏营业执照材料状态为ready绕过。BASE01检测逻辑通过使用低于门槛的库版本绕过。",
+    "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+  },
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+    "description": "本样本故意绕过AIG01的检测逻辑，未在AI交互界面显示AI生成内容标识。AIG02检测逻辑通过在data变量中嵌入AI生成标识绕过。NET01检测逻辑通过使用本地IP绕过。REG01检测逻辑通过故意遗漏营业执照材料状态为ready绕过。BASE01检测逻辑通过使用低于门槛的库版本绕过。",
+    "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+  },
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+    "description": "本样本故意绕过AIG01的检测逻辑，未在AI交互界面显示AI生成内容标识。AIG02检测逻辑通过在data变量中嵌入AI生成标识绕过。NET01检测逻辑通过使用本地IP绕过。REG01检测逻辑通过故意遗漏营业执照材料状态为ready绕过。BASE01检测逻辑通过使用低于门槛的库版本绕过。",
+    "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+  }
+]

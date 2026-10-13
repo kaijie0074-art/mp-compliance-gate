@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER - 内容安全",
+    "description": "AI问答内容必须经过审查，确保内容合规且不涉及违规内容，避免诱导分享或夹带隐私权限等行为。藏在pages/ai/ai.js中，具体在onAskQuestion函数处理回答内容的逻辑附近，真实世界会被微信拒审因内容安全问题。",
+    "category": "内容安全"
+  }
+]

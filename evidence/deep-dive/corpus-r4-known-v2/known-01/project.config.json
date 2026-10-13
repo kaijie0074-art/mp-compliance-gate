@@ -1,0 +1,16 @@
+{
+  "miniprogram": {
+    "appid": "wx6f9f6a84c392a6ae",
+    "projectname": "ai_tool",
+    "libVersion": "3.15.1",
+    "setting": {
+      "urlCheck": true,
+      "es6": true,
+      "postcss": true,
+      "minified": true,
+      "newFeature": true,
+      "checkInvalidCert": false
+    },
+    "description": "AI tool miniprogram"
+  }
+}

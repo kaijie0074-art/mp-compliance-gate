@@ -1,0 +1,39 @@
+{
+  "mode": "compliant",
+  "n": 8,
+  "jsonFail": 0,
+  "samples": [
+    {
+      "id": "compliant-01",
+      "violations": 1
+    },
+    {
+      "id": "compliant-02",
+      "violations": 1
+    },
+    {
+      "id": "compliant-03",
+      "violations": 1
+    },
+    {
+      "id": "compliant-04",
+      "violations": 1
+    },
+    {
+      "id": "compliant-05",
+      "violations": 1
+    },
+    {
+      "id": "compliant-06",
+      "violations": 1
+    },
+    {
+      "id": "compliant-07",
+      "violations": 1
+    },
+    {
+      "id": "compliant-08",
+      "violations": 5
+    }
+  ]
+}

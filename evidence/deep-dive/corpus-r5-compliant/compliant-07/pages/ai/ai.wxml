@@ -1,0 +1,9 @@
+<view class="container">
+  <text>内容由AI生成</text>
+  <input bindinput="onQueryInput" placeholder="请输入问题"/>
+  <button bindtap="onAskQuestion">问AI</button>
+  <view wx:if="{{question}}" class="question">
+    <text>问：{{question}}</text>
+    <text>答：{{answer}}</text>
+  </view>
+</view>

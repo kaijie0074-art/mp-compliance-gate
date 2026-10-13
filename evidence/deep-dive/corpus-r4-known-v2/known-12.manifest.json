@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+    "description": "以下为合规违规示例：\n- AIG01: 在 app.json 中 pages 字段使用了索引号而非路径名（微信官方推荐使用路径名），可能导致页面路径错误。\n- AIG02: pages/ai/ai.js 中的 send 方法调用了云函数 'ai'，但未在 wx.setClipboardData 中添加 AI 标识文案。\n- REG01: compliance/checklist.yaml 中缺少 '协议文本' 材料的状态标记为 'ready'。\n- OTHER: pages/ai/ai.js 中使用了 wx.cloud.callFunction 调用云函数，可能涉及到敏感数据处理和权限问题，未在合规材料中进行说明。",
+    "category": "类目规避/内容安全/材料造假"
+  }
+]

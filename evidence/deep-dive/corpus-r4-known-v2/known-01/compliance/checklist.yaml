@@ -1,0 +1,14 @@
+materials:
+- id: "license"
+  name: "Business License"
+  status: "ready"
+- id: "tech_reg"
+  name: "Technology Provider Registration"
+  status: "ready"
+- id: "brand"
+  name: "Brand Logo"
+  status: "ready"
+- id: "terms"
+  name: "Terms and Conditions"
+  status: "ready"
+<yaml 完整内容>

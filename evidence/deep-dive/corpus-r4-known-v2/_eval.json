@@ -1,0 +1,593 @@
+{
+  "summary": {
+    "corpus": "corpus-r4-known-v2",
+    "samples": 9,
+    "adversarial": 9,
+    "escapedSamples": 0,
+    "fullyEscapedSamples": 0,
+    "perRule": {
+      "AIG01": {
+        "embedded": 12,
+        "caught": 12
+      },
+      "AIG02": {
+        "embedded": 12,
+        "caught": 0
+      },
+      "NET01": {
+        "embedded": 11,
+        "caught": 0
+      },
+      "REG01": {
+        "embedded": 12,
+        "caught": 11
+      },
+      "BASE01": {
+        "embedded": 12,
+        "caught": 0
+      }
+    },
+    "otherCategories": {}
+  },
+  "rows": [
+    {
+      "id": "known-01",
+      "embedded": 1,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+          "description": "以下违规在app.json, pages/ai/ai.wxml, pages/ai/ai.js文件中",
+          "category": "类目规避"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "类目规避"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "REG01"
+      ],
+      "blockers": 2,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "AI 生成结果界面缺少「内容由 AI 生成」显著提示"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "compliance/checklist.yaml 无法解析：YAML 语法错误 第 14 行: <yaml 完整内容>——材料齐备性无法机械确认，需人工核对"
+        }
+      ],
+      "blockerHints": 4,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "known-02",
+      "embedded": 1,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|AIG02|REG01|BASE01|OTHER 之一",
+          "description": "以下违规将绕过检测逻辑，藏在特定文件与行附近。AIG01: 未显式标识AI生成内容；AIG02: 未在复制/导出时保留AI生成标识；REG01: checklist.yaml中材料未全部就绪；BASE01: project.config.json中libVersion低于3.15.1；OTHER: 代码中包含敏感信息泄露。",
+          "category": "类目规避"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "类目规避"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "REG01"
+      ],
+      "blockers": 2,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "AI 生成结果界面缺少「内容由 AI 生成」显著提示"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "compliance/checklist.yaml 无法解析：YAML 缩进错误 第 3 行——材料齐备性无法机械确认，需人工核对"
+        }
+      ],
+      "blockerHints": 3,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "known-03",
+      "embedded": 4,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+          "description": "本样本故意绕过AIG01的检测逻辑，未在AI交互界面显示AI生成内容标识。AIG02检测逻辑通过在data变量中嵌入AI生成标识绕过。NET01检测逻辑通过使用本地IP绕过。REG01检测逻辑通过故意遗漏营业执照材料状态为ready绕过。BASE01检测逻辑通过使用低于门槛的库版本绕过。",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+          "description": "本样本故意绕过AIG01的检测逻辑，未在AI交互界面显示AI生成内容标识。AIG02检测逻辑通过在data变量中嵌入AI生成标识绕过。NET01检测逻辑通过使用本地IP绕过。REG01检测逻辑通过故意遗漏营业执照材料状态为ready绕过。BASE01检测逻辑通过使用低于门槛的库版本绕过。",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+          "description": "本样本故意绕过AIG01的检测逻辑，未在AI交互界面显示AI生成内容标识。AIG02检测逻辑通过在data变量中嵌入AI生成标识绕过。NET01检测逻辑通过使用本地IP绕过。REG01检测逻辑通过故意遗漏营业执照材料状态为ready绕过。BASE01检测逻辑通过使用低于门槛的库版本绕过。",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+          "description": "本样本故意绕过AIG01的检测逻辑，未在AI交互界面显示AI生成内容标识。AIG02检测逻辑通过在data变量中嵌入AI生成标识绕过。NET01检测逻辑通过使用本地IP绕过。REG01检测逻辑通过故意遗漏营业执照材料状态为ready绕过。BASE01检测逻辑通过使用低于门槛的库版本绕过。",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "AIG01",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "AIG01",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "AIG01",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "类目规避/虚拟支付/诱导分享/内容安全/材料造假"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "REG01"
+      ],
+      "blockers": 2,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "AI 生成结果界面缺少「内容由 AI 生成」显著提示"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "compliance/checklist.yaml 无法解析：YAML 语法错误 第 14 行: <yaml 完整内容>——材料齐备性无法机械确认，需人工核对"
+        }
+      ],
+      "blockerHints": 16,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "known-04",
+      "embedded": 1,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+          "description": "以下违规均埋藏在上述文件中，真实世界可能因隐私权限夹带、类目规避等原因被微信拒审。",
+          "category": "类目规避"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "类目规避"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "REG01"
+      ],
+      "blockers": 2,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "AI 生成结果界面缺少「内容由 AI 生成」显著提示"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "compliance/checklist.yaml 无法解析：YAML 语法错误 第 14 行: <yaml 完整内容>——材料齐备性无法机械确认，需人工核对"
+        }
+      ],
+      "blockerHints": 4,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "known-06",
+      "embedded": 1,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+          "description": "这处埋的违规是什么、藏在哪个文件哪一行附近、为什么真实世界会被微信拒审",
+          "category": "若 rule_hint=OTHER 给违规类别短词（隐私权限夹带/类目规避/虚拟支付/诱导分享/内容安全/材料造假）"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "若 rule_hint=OTHER 给违规类别短词（隐私权限夹带/类目规避/虚拟支付/诱导分享/内容安全/材料造假）"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "若 rule_hint=OTHER 给违规类别短词（隐私权限夹带/类目规避/虚拟支付/诱导分享/内容安全/材料造假）"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "若 rule_hint=OTHER 给违规类别短词（隐私权限夹带/类目规避/虚拟支付/诱导分享/内容安全/材料造假）"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "若 rule_hint=OTHER 给违规类别短词（隐私权限夹带/类目规避/虚拟支付/诱导分享/内容安全/材料造假）"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "若 rule_hint=OTHER 给违规类别短词（隐私权限夹带/类目规避/虚拟支付/诱导分享/内容安全/材料造假）"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "REG01"
+      ],
+      "blockers": 2,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "结构判定：页面 pages/ai/ai 呈现 AI 生成内容（AI API/业务文案信号）但界面未见「内容由 AI 生成」显著提示——启发式判定，误报请人工复核"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "compliance/checklist.yaml 无法解析：YAML 缩进错误 第 3 行——材料齐备性无法机械确认，需人工核对"
+        }
+      ],
+      "blockerHints": 4,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "known-07",
+      "embedded": 1,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+          "description": "以下违规均为故意埋设，用于评估门禁系统的检测能力。1. app.json pages 路径存在误写，可能导致结构判定错误。2. pages/ai/ai.js 中存在明文 HTTP 请求，违反 NET01 规则。3. pages/ai/ai.js 中未使用 AI 标识变量，违反 AIG02 规则。4. compliance/checklist.yaml 中缺少协议文本材料的 status，违反 REG01 规则。",
+          "category": "内容安全"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "内容安全"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "REG01"
+      ],
+      "blockers": 2,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "AI 生成结果界面缺少「内容由 AI 生成」显著提示"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "compliance/checklist.yaml 无法解析：YAML 缩进错误 第 3 行——材料齐备性无法机械确认，需人工核对"
+        }
+      ],
+      "blockerHints": 4,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "known-08",
+      "embedded": 1,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+          "description": "以下违规将展示如何在合规门禁规则中留下漏洞。",
+          "category": "内容安全"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "内容安全"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "内容安全"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "REG01"
+      ],
+      "blockers": 2,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "结构判定：页面 pages/ai/ai 呈现 AI 生成内容（AI API/业务文案信号）但界面未见「内容由 AI 生成」显著提示——启发式判定，误报请人工复核"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "compliance/checklist.yaml 无法解析：YAML 语法错误 第 14 行: ```——材料齐备性无法机械确认，需人工核对"
+        }
+      ],
+      "blockerHints": 4,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "known-10",
+      "embedded": 1,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+          "description": "以下违规为模拟，用于演示如何绕过微信小程序上架合规门禁检测。",
+          "category": "类目规避"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "类目规避"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "类目规避"
+        }
+      ],
+      "firedRules": [
+        "AIG01"
+      ],
+      "blockers": 1,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "AI 生成结果界面缺少「内容由 AI 生成」显著提示"
+        }
+      ],
+      "blockerHints": 4,
+      "escaped": false,
+      "fullyEscaped": false
+    },
+    {
+      "id": "known-12",
+      "embedded": 1,
+      "manifest": [
+        {
+          "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+          "description": "以下为合规违规示例：\n- AIG01: 在 app.json 中 pages 字段使用了索引号而非路径名（微信官方推荐使用路径名），可能导致页面路径错误。\n- AIG02: pages/ai/ai.js 中的 send 方法调用了云函数 'ai'，但未在 wx.setClipboardData 中添加 AI 标识文案。\n- REG01: compliance/checklist.yaml 中缺少 '协议文本' 材料的状态标记为 'ready'。\n- OTHER: pages/ai/ai.js 中使用了 wx.cloud.callFunction 调用云函数，可能涉及到敏感数据处理和权限问题，未在合规材料中进行说明。",
+          "category": "类目规避/内容安全/材料造假"
+        }
+      ],
+      "hints": [
+        {
+          "rule_hint": "AIG01",
+          "category": "类目规避/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "AIG02",
+          "category": "类目规避/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "NET01",
+          "category": "类目规避/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "REG01",
+          "category": "类目规避/内容安全/材料造假"
+        },
+        {
+          "rule_hint": "BASE01",
+          "category": "类目规避/内容安全/材料造假"
+        }
+      ],
+      "firedRules": [
+        "AIG01",
+        "REG01"
+      ],
+      "blockers": 2,
+      "findings": [
+        {
+          "ruleId": "AIG01",
+          "severity": "blocker",
+          "file": "pages/ai/ai.wxml",
+          "detail": "AI 生成结果界面缺少「内容由 AI 生成」显著提示"
+        },
+        {
+          "ruleId": "REG01",
+          "severity": "blocker",
+          "file": "compliance/checklist.yaml",
+          "detail": "compliance/checklist.yaml 无法解析：YAML 缩进错误 第 3 行——材料齐备性无法机械确认，需人工核对"
+        }
+      ],
+      "blockerHints": 4,
+      "escaped": false,
+      "fullyEscaped": false
+    }
+  ]
+}

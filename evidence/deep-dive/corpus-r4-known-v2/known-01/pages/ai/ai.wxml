@@ -1,0 +1,5 @@
+<view class="ai-container">
+  <text class="ai-chat">AI: Hello, how can I help you today?</text>
+  <input type="text" placeholder="Type your message here" bindinput="onInput"/>
+  <button bindtap="sendMessage">Send</button>
+</view>

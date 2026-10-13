@@ -1,0 +1,102 @@
+```yaml
+# compliance/checklist.yaml
+materials:
+  - id:营业执照
+    name:营业执照
+    status: ready
+  - id:技术方备案文件
+    name:技术方备案文件
+    status: ready
+  - id:标识样式截图
+    name:标识样式截图
+    status: ready
+  - id:协议文本
+    name:协议文本
+    status: ready
+```
+
+```json
+# app.json
+{
+  "pages": [
+    "pages/ai/ai"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AI Chat",
+    "navigationBarTextStyle": "black"
+  }
+}
+```
+
+```json
+# project.config.json
+{
+  "miniprogram": {
+    "cloud": true,
+    "libVersion": "3.15.0"
+  },
+  "setting": {
+    "urlCheck": true
+  }
+}
+```
+
+```html
+<!-- pages/ai/ai.wxml -->
+<view class="container">
+  <view class="ai-chat">
+    <text>AI Chat</text>
+    <input class="input-field" placeholder="Enter your message" bindinput="onInput" />
+    <button class="send-button" bindtap="onSend">Send</button>
+  </view>
+</view>
+```
+
+```javascript
+// pages/ai/ai.js
+Page({
+  data: {
+    inputVal: ''
+  },
+  onInput: function(e) {
+    this.setData({
+      inputVal: e.detail.value
+    });
+  },
+  onSend: function() {
+    const inputVal = this.data.inputVal;
+    wx.cloud.callFunction({
+      name: 'generateText',
+      data: { text: inputVal },
+      success: res => {
+        this.setData({
+          inputVal: res.result.text
+        });
+      }
+    });
+  }
+});
+```
+
+===MANIFEST===
+[{"rule_hint":"AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一","description":"本次生成编号 known-05，业务场景为AI聊天小程序，埋设违规如下：\n1. pages/ai/ai.wxml 第 3 行，缺少AI生成内容显式标识（AIG01）。\n2. pages/ai/ai.js 代码中未在wx.setClipboardData调用中追加AI生成标识（AIG02）。\n3. pages/ai/ai.js 代码中wx.cloud.callFunction调用的域名使用的是http://，违反了HTTPS域名要求（NET01）。\n4. project.config.json 中libVersion设置为3.15.0，低于云开发AI的最低版本要求3.15.1（BASE01）。\n5. compliance/checklist.yaml 中缺少深度合成类目提审材料的状态信息（REG01），通过伪造status=ready绕过检测。","category":"内容安全/材料造假"}]
+
+embedded_violations:
+  - violation_id: AIG01
+    file: pages/ai/ai.wxml
+    line: 3
+    reason: 缺少AI生成内容显式标识
+  - violation_id: AIG02
+    file: pages/ai/ai.js
+    reason: 未在wx.setClipboardData调用中追加AI生成标识
+  - violation_id: NET01
+    file: pages/ai/ai.js
+    reason: wx.cloud.callFunction调用的域名使用http://
+  - violation_id: BASE01
+    file: project.config.json
+    reason: libVersion低于云开发AI最低版本要求
+  - violation_id: REG01
+    file: compliance/checklist.yaml
+    reason: 缺少深度合成类目提审材料的状态信息

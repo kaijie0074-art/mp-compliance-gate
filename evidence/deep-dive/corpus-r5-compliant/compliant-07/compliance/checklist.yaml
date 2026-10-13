@@ -1,0 +1,16 @@
+materials:
+  - id: MAT001
+    name: "App JSON"
+    status: "Reviewed"
+  - id: MAT002
+    name: "Project Config JSON"
+    status: "Reviewed"
+  - id: MAT003
+    name: "AI Page WXML"
+    status: "Reviewed"
+  - id: MAT004
+    name: "AI Page JS"
+    status: "Reviewed"
+  - id: MAT005
+    name: "Compliance Checklist YAML"
+    status: "Reviewed"

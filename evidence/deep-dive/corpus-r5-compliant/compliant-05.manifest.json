@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+    "description": "本小程序中AI问答功能已明确标注'内容由AI生成'，确保用户了解内容来源。复制路径标识已在页面上显示，使用https协议确保安全，提审材料已全部就绪，libVersion满足要求。",
+    "category": "内容安全/隐私权限夹带/类目规避/虚拟支付/诱导分享"
+  }
+]

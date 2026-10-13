@@ -1,0 +1,5 @@
+<view class="ai-container">
+  <input type="text" placeholder="Ask me anything..." bindinput="onInput" />
+  <button bindtap="onSend">Send</button>
+  <view class="ai-response" wx:for="{{responses}}" wx:key="index">{{item}}</view>
+</view>

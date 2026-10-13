@@ -1,0 +1,7 @@
+<view class="container">
+  <view class="ai-chat">
+    <text>您好，我是AI助手，请问有什么可以帮助您的？</text>
+  </view>
+  <input class="input-box" type="text" placeholder="请输入您的消息" />
+  <button bindtap="sendMessage">发送</button>
+</view>

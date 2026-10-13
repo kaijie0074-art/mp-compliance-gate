@@ -1,0 +1,11 @@
+{
+  "miniprogram": {
+    "cloud": true,
+    "appid": "wx1234567890abcdef",
+    "projectname": "ai-assistant",
+    "libVersion": "3.15.0"
+  },
+  "setting": {
+    "urlCheck": true
+  }
+}

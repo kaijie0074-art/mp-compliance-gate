@@ -1,0 +1,19 @@
+{
+  "miniprogramRoot": "./",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": false,
+    "minified": true,
+    "postcss": true,
+    "es6": true,
+    "enhance": true,
+    "nodejs": 2,
+    "packNpmManually": true,
+    "packNpmignore": [
+      "package-lock.json"
+    ],
+    "userModule": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "3.15.1"
+}

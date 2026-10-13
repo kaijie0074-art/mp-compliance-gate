@@ -1,0 +1,16 @@
+materials:
+- id: 1
+  name: "AI Content Identification"
+  status: "Completed"
+- id: 2
+  name: "URL Scheme Compliance"
+  status: "Completed"
+- id: 3
+  name: "SSL Certification"
+  status: "Completed"
+- id: 4
+  name: "Review Materials Prepared"
+  status: "Completed"
+- id: 5
+  name: "LibVersion Check"
+  status: "Completed"

@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+    "description": "AI内容生成标识未正确显示，URL未完全使用https，材料准备不完整，libVersion未达到要求",
+    "category": "内容安全/材料造假/网络安全/合规性/基础功能/其他"
+  }
+]

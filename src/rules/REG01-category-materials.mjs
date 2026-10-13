@@ -6,6 +6,9 @@
  * 属规则固有上限），但当时的「拦截」其实来自 yaml-lite 解析失败被误报成"缺少清单文件"——
  * 文件存在却解析失败必须与文件缺失区分开，否则消息误导人工排查。
  */
+// 「就绪」状态词表（对抗研究 Q5：合规意图样本写 Checked/Completed/passed/已就绪 等变体，
+const READY = /^(ready|complete[d]?|compliant|checked|reviewed|passed|done|ok|已就绪|已完备|已准备|已合规)$/i;
+
 export default {
   id: "REG01",
   check(ctx) {
@@ -17,7 +20,7 @@ export default {
       return [{ file: "compliance/checklist.yaml", detail: "缺少提审材料清单文件（深度合成类目材料无人跟踪）" }];
     }
     for (const m of ctx.checklist.materials) {
-      if (m.required !== false && m.status !== "ready") {
+      if (m.required !== false && !READY.test(String(m.status ?? ""))) {
         findings.push({
           file: "compliance/checklist.yaml",
           detail: `材料未就绪：${m.name}（id=${m.id}, status=${m.status ?? "missing"}）`,

@@ -1,0 +1,7 @@
+[
+  {
+    "rule_hint": "AIG01|AIG02|NET01|REG01|BASE01|OTHER 之一",
+    "description": "以下违规为模拟，用于演示如何绕过微信小程序上架合规门禁检测。",
+    "category": "类目规避"
+  }
+]

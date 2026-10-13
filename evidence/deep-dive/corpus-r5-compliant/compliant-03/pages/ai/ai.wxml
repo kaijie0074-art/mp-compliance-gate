@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="ai-title">内容由 AI 生成</view>
+  <view class="ai-input">
+    <input bindinput="onInput" placeholder="请输入您的问题" />
+  </view>
+  <view class="ai-button" bindtap="askAI">提问</view>
+  <view class="ai-answer" bindtap="copyAnswer">{{answer}}</view>
+</view>

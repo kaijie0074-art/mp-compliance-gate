@@ -1,0 +1,23 @@
+{
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "miniprogramRoot": "./",
+  "projectname": "compliant-05",
+  "appid": "wx1234567890abcdef",
+  "libVersion": "3.15.1",
+  "condition": {
+    "search": {
+      "current": -1,
+      "list": []
+    },
+    "conversation": {
+      "current": -1,
+      "list": []
+    }
+  }
+}

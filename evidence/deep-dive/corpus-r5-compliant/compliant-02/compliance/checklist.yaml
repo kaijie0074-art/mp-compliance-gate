@@ -1,0 +1,4 @@
+materials:
+- id: compliant-02
+  name: AI_问答合规检查
+  status: ready
